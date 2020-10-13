@@ -12,7 +12,7 @@ const MaintenanceFeeList = () => {
                   fontWeight: "bold",
                   textAlign: "center",
                 }}>
-         관리비내역목록
+         관리비 내역 목록
         </div>
     )
 }

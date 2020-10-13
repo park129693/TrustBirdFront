@@ -13,7 +13,7 @@ const SignModified = () => {
                   fontWeight: "bold",
                   textAlign: "center",
                 }}>
-         회원정보수정
+         회원 정보 수정
         </div>
     )
 }

@@ -14,7 +14,7 @@ const TrustWay = () => {
                 fontWeight: "bold",
                 textAlign: "center",
             }}>
-                    신탁방법
+                    신탁 방법
         </div>
     )
 }

@@ -14,7 +14,7 @@ const Withdrawal = () => {
         fontWeight: "bold",
         textAlign: "center",
       }}>
-회원탈퇴
+회원 탈퇴
 </div>
     )
 }
