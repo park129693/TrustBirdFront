@@ -12,7 +12,7 @@ const ServiceIntro = () => {
               fontWeight: "bold",
               textAlign: "center",
             }}>
-              서비스소개
+              서비스 소개
                   </div>
   );
 };

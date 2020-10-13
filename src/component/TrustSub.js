@@ -16,7 +16,7 @@ const TrustSub = () => {
                 fontWeight: "bold",
                 textAlign: "center",
               }}>
-       신탁신청
+       신탁 신청
       </div>
     <Form>
       <Form.Group controlId="formBasicType">

@@ -4,11 +4,11 @@ import { Container, Form, Button } from "react-bootstrap";
 //Sign Up
 const SignUp = () => {
 //   const [setUserName, useUserName] =  useState(setUserName, useUserName)
-//   const [setUserEmail, useUserEmail] =  useState(setUserEmail, useUserEmail)
-//   const [setUserPassword, useUserPassword] =  useState(setUserPassword, useUserPassword)
-//   const [setUserDateOfBirth,useUserDateOfBirth] = useState(setUserDateDfBirth,useUserDateOfBirth)
-//   const [setUserGender,useUserGender] = useState(setUserGender,useUserGender)
-//   const [setUsertelePhoneNum,useUsertelePhoneNum] = useState(setUsertelePhoneNum,useUsertelePhoneNum)
+//   const [setEmail, useEmail] =  useState(setUserEmail, useUserEmail)
+//   const [setPassword, usePassword] =  useState(setUserPassword, useUserPassword)
+//   const [setDateOfBirth,useDateOfBirth] = useState(setDateDfBirth,useDateOfBirth)
+//   const [setGender,useGender] = useState(setGender,useGender)
+//   const [setTelephoneNum,useTelephoneNum] = useState(setTelephoneNum,useTelephoneNum)
   
 
   return (
