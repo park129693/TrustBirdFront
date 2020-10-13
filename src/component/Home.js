@@ -11,7 +11,6 @@ const Home = () => {
             style={{
               margintop: 139,
               fontSize: 50,
-              fontFamily: "Malgun Gothic",
               fontWeight: "bold",
             }}
           >
@@ -20,7 +19,7 @@ const Home = () => {
             당신의 불편한 일들을
           </Col>
         </Row>
-        <button href="./ServiceIntro"> 서비스소개</button>
+        <Button href="./ServiceIntro"> 서비스소개</Button>
       </div>
 
       <Row>

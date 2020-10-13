@@ -22,7 +22,7 @@ import Navbar from "../component/Navbar/Navbar";
 
 const Main = () => {
   return (
-    <diu>
+    <div>
       <Navbar />
       <div style={{ marginTop: 100 }}>
         <Router>
@@ -79,7 +79,7 @@ const Main = () => {
           </Switch>
         </Router>
       </div>
-    </diu>
+    </div>
   );
 };
 
