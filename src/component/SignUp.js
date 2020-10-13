@@ -1,9 +1,30 @@
-import React from "react";
-import { Form } from "react-bootstrap";
+import React, { Fragment } from "react";
+import { Container, Form, Button } from "react-bootstrap";
 
 //Sign Up
 const SignUp = () => {
+//   const [setUserName, useUserName] =  useState(setUserName, useUserName)
+//   const [setUserEmail, useUserEmail] =  useState(setUserEmail, useUserEmail)
+//   const [setUserPassword, useUserPassword] =  useState(setUserPassword, useUserPassword)
+//   const [setUserDateOfBirth,useUserDateOfBirth] = useState(setUserDateDfBirth,useUserDateOfBirth)
+//   const [setUserGender,useUserGender] = useState(setUserGender,useUserGender)
+//   const [setUsertelePhoneNum,useUsertelePhoneNum] = useState(setUsertelePhoneNum,useUsertelePhoneNum)
+  
+
   return (
+    <Container style={{maxWidth: "500px", margin: "auto"}}>
+      <div 
+              style={{
+                fontSize: 24,
+                padding :"auto",
+                marginBottom: "32px",
+                marginTop: "208px",
+                color: " #3B72F2",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}>
+       회원가입
+      </div>
     <Form>
       <Form.Group controlId="formBasicUsername">
         <Form.Label> 사용자 이름 </Form.Label>
@@ -47,6 +68,11 @@ const SignUp = () => {
         <Form.Control type="text" placeholder="휴대전화번호 입력" required />
       </Form.Group>
     </Form>
+    <Button variant="primary" type="submit" style={{ float: "right", marginTop: "16px",}}>
+        Submit
+      </Button>
+    </Container>
+
   );
 };
 

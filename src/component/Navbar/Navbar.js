@@ -9,6 +9,7 @@ import {
   NavDropdown,
   Container,
 } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
 import Logo from "../icons/LogoIcon";
 
@@ -30,6 +31,7 @@ export default function Navbar() {
         borderBottomWidth: 1,
         borderColor: "#c2c2c2",
         borderBottomStyle: "solid",
+        background: "white" ,
       }}
     >
       <Container>
@@ -45,6 +47,7 @@ export default function Navbar() {
                 marginLeft: "16px",
                 marginBottom: "0",
                 color: " #3B72F2",
+                fontWeight: "bold",
               }}
             >
               TrustBird

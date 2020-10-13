@@ -3,8 +3,16 @@ import React from "react";
 //Menu
 const Menu = () => {
   return (
-    <div>
-      <h1>메뉴</h1>
+    <div 
+            style={{
+              fontSize: 24,
+              padding :"auto",
+              marginBottom: "32px",
+              color: " #3B72F2",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}>
+     메뉴
     </div>
   );
 };

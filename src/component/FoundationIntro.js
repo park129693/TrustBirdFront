@@ -3,8 +3,17 @@ import React from 'react'
 //Foundation Introduce
 const FoundationIntro = () => {
     return (
-        <div>
-            <h1>재단 소개</h1>
+        <div 
+                style={{
+                  fontSize: 24,
+                  padding :"auto",
+                  marginBottom: "32px",
+                  marginTop: "208px",
+                  color: " #3B72F2",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}>
+         재단소개
         </div>
     )
 }

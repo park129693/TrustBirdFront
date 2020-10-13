@@ -1,9 +1,23 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 
 //Trust Subscription
 const TrustSub = () => {
   return (
+    <Container>
+      
+      <div 
+              style={{
+                fontSize: 24,
+                padding :"auto",
+                marginBottom: "32px",
+                marginTop: "208px",
+                color: " #3B72F2",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}>
+       신탁신청
+      </div>
     <Form>
       <Form.Group controlId="formBasicType">
         <Form.Label> 신탁 부동산 종류 </Form.Label>
@@ -53,6 +67,7 @@ const TrustSub = () => {
         <Form.Control type="image" />
       </Form.Group>
     </Form>
+    </Container>
   );
 };
 
