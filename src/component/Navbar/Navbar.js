@@ -10,9 +10,7 @@ import {
   Container,
 } from "react-bootstrap";
 import { Link, NavLink, withRouter } from "react-router-dom";
-
 import Logo from "../icons/LogoIcon";
-
 import "./Navbar.css";
 
 export default function Navbar(props) {

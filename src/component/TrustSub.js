@@ -1,42 +1,55 @@
 import React from "react";
 import { Container, Form } from "react-bootstrap";
+import PostFixInput from "./PostFixInput";
+import PageHeader from "./PageHeader";
 
 //Trust Subscription
 const TrustSub = () => {
   return (
     <Container>
-      <div
-        style={{
-          fontSize: 24,
-          padding: "auto",
-          marginBottom: "32px",
-          marginTop: "208px",
-          color: " #3B72F2",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
-        신탁 신청
-      </div>
+    <PageHeader>신탁 신청</PageHeader>
       <Form>
         <Form.Group controlId="formBasicType">
           <Form.Label> 신탁 부동산 종류 </Form.Label>
-          <Form.Control type="text" placeholder="신탁 부동산 종류" required />
+      <PostFixInput
+        labelText="부동산종류"
+        postfix=""
+        type="text"
+        placeholder="종류"
+      />
         </Form.Group>
 
         <Form.Group controlId="formBasicPrice">
           <Form.Label> 신탁 부동산 가격 </Form.Label>
-          <Form.Control type="text" placeholder="신탁 부동산 가격" required />
+          
+      <PostFixInput
+        labelText="부동산가격"
+        postfix="만원"
+        type="text"
+        placeholder="금액"
+      />
         </Form.Group>
 
         <Form.Group controlId="formBasicTrustProfit">
           <Form.Label> 원본의 수익 </Form.Label>
-          <Form.Control type="text" placeholder="원본의 수익" />
+                
+            <PostFixInput
+              labelText="원본의수익"
+              postfix="만원"
+              type="text"
+              placeholder="금액"
+            />
         </Form.Group>
 
         <Form.Group controlId="formBasicNegligenceProfit">
           <Form.Label> 수익의 수익 </Form.Label>
-          <Form.Control type="text" placeholder="수익의 수익" />
+                
+            <PostFixInput
+              labelText="수익의수익"
+              postfix="만원"
+              type="text"
+              placeholder="금액"
+            />
         </Form.Group>
 
         <Form.Group controlId="formBasicMonthly">
