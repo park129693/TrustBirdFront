@@ -1,7 +1,5 @@
 import React from "react";
-
-//Maintenance Fee
-const MaintenanceFee = () => {
+const PageHeader = ({ children }) => {
   return (
     <div
       style={{
@@ -13,9 +11,9 @@ const MaintenanceFee = () => {
         textAlign: "center",
       }}
     >
-      관리비 내역서
+      {children}
     </div>
   );
 };
 
-export default MaintenanceFee;
+export default PageHeader;

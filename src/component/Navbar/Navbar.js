@@ -9,13 +9,13 @@ import {
   NavDropdown,
   Container,
 } from "react-bootstrap";
-import { withRouter } from "react-router-dom";
+import { Link, NavLink, withRouter } from "react-router-dom";
 
 import Logo from "../icons/LogoIcon";
 
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isLogined, setIsLogined] = React.useState(false);
   React.useEffect(() => {
     setIsLogined(true);
@@ -31,7 +31,7 @@ export default function Navbar() {
         borderBottomWidth: 1,
         borderColor: "#c2c2c2",
         borderBottomStyle: "solid",
-        background: "white" ,
+        background: "white",
       }}
     >
       <Container>
@@ -64,9 +64,15 @@ export default function Navbar() {
         <BootStrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootStrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home" className="navlink">
-              제단소개
+            <Nav.Link className="navlink">
+              <Link
+                style={{ color: "inherit", textDecoration: "inherit" }}
+                to="/serviceintro"
+              >
+                재단소개
+              </Link>
             </Nav.Link>
+
             <Nav.Link href="#link" className="navlink">
               계약신탁
             </Nav.Link>
@@ -92,7 +98,7 @@ export default function Navbar() {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <Nav.Link href="#login" className="navlink">
+              <Nav.Link href="../Signin" className="navlink">
                 로그인
               </Nav.Link>
             )}

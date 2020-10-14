@@ -23,9 +23,9 @@ import Navbar from "../component/Navbar/Navbar";
 const Main = () => {
   return (
     <div>
-      <Navbar />
-      <div style={{ marginTop: 100 }}>
-        <Router>
+      <Router>
+        <Navbar />
+        <div style={{ marginTop: 100 }}>
           {/* <Route component={Navbar} /> */}
           <Switch>
             <Route exact path="/">
@@ -77,8 +77,8 @@ const Main = () => {
                     <SignOut />
                 </Route> */}
           </Switch>
-        </Router>
-      </div>
+        </div>
+      </Router>
     </div>
   );
 };
