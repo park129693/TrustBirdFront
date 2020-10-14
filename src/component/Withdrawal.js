@@ -1,21 +1,10 @@
 import React from "react";
+import PageHeader from "./PageHeader";
 
 //Withdrawal
 const Withdrawal = () => {
   return (
-    <div
-      style={{
-        fontSize: 24,
-        padding: "auto",
-        marginBottom: "32px",
-        marginTop: "208px",
-        color: " #3B72F2",
-        fontWeight: "bold",
-        textAlign: "center",
-      }}
-    >
-      회원 탈퇴
-    </div>
+    <PageHeader>회원탈퇴</PageHeader>
   );
 };
 

@@ -9,7 +9,7 @@ const PostFixInput = ({ type, placeholder, postfix, onChange, ...props }) => {
         onChange={onChange}
         placeholder={placeholder}
         required
-        style={Object.assign({ paddingRight: 44 }, props.style)}
+        style={Object.assign({ paddingRight: 44 }, props.style) }
         {...props}
       />
       <span
