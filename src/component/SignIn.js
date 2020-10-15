@@ -1,27 +1,28 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import PostFixInput from "./PostFixInput";
+import PageHeader from "./PageHeader";
+import Logo from "../component/icons/LogoIcon";
+
 
 //Sign In
 const SignIn = () => {
   return (
     <Container style={{ maxWidth: "800px", margin: "auto" }}>
-      <div
-        style={{
-          fontSize: 24,
-          padding: "auto",
-          marginTop: "208px",
-          marginBottom: "32px",
-          color: " #3B72F2",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
-        로그인
-      </div>
-      <Form style={{ marginTop: "10rem" }}>
+    <div style={{
+        fontSize: 60,
+        margin: "auto",
+        marginBottom: "10px",
+        marginTop:"180px",
+        color: "#3B72F2",
+        fontWeight: "bold",
+        textAlign: "center",  }}>
+      <Logo />
+      로그인
+    </div>
+      <Form style={{ marginTop: "5rem" }}>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Eamil</Form.Label>
+          <Form.Label>이메일</Form.Label>
           <Form.Control type="email" placeholder="Enter email" required />
         </Form.Group>
         {/* <Form.Group controlId="formBasicEmail">
@@ -30,16 +31,17 @@ const SignIn = () => {
         </Form.Group> */}
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" required />
+          <Form.Label>비밀번호</Form.Label>
+          <Form.Control type="password" placeholder="Enter Password" required />
         </Form.Group>
 
         <Button
           variant="primary"
           type="submit"
-          style={{ float: "right", marginTop: "16px" }}
+          size="lg"
+          style={{ backgroundColor:"#3B72F2", outlineColor:"#3B72F2", marginTop: "16px" }}
         >
-          Submit
+          로그인 하기
         </Button>
       </Form>
     </Container>

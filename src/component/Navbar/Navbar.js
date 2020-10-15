@@ -6,10 +6,13 @@ import {
   NavDropdown,
   Container,
 } from "react-bootstrap";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
+=======
+import { Link, NavLink, withRouter } from "react-router-dom";
+>>>>>>> d43011202b9f0a4413ae7d8ca1e1e9fa77d74cd6
 import Logo from "../icons/LogoIcon";
-
 import "./Navbar.css";
 
 import pageLink from "./pageLink";
