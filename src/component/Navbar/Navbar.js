@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Logo from "../icons/LogoIcon";
 import "./Navbar.css";
 
-import pageLink from "./pageLink";
+import PageLink from "./pageLink";
 
 export default function Navbar(props) {
   const [isLogined, setIsLogined] = React.useState(false);
@@ -34,7 +34,7 @@ export default function Navbar(props) {
       }}
     >
       <Container>
-        <BootStrapNavbar.Brand href="#home">
+        <BootStrapNavbar.Brand href="/main">
           <div>
             <div style={{ display: "inline-block" }}>
               <Logo />
@@ -64,42 +64,40 @@ export default function Navbar(props) {
         <BootStrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link className="navlink">
-              <Link
-                style={{ color: "inherit", textDecoration: "inherit" }}
-                to="/serviceintro"
-              >
-                재단소개
-              </Link>
+              <PageLink to="/fundationintro">재단소개</PageLink>
             </Nav.Link>
 
             <Nav.Link className="navlink">
-              <pageLink to="/trust" />
-              신탁 계약
+              <PageLink to="/trust">신탁 계약</PageLink>
             </Nav.Link>
 
-            <Nav.Link href="#service" className="navlink">
-              정보소개
+            <Nav.Link className="navlink">
+              <PageLink to="/serviceintro">정보소개</PageLink>
             </Nav.Link>
             {isLogined ? (
-              <NavDropdown title="개인정보" id="basic-nav-dropdown">
+              <NavDropdown
+                title="개인정보"
+                id="basic-nav-dropdown"
+                className="navlink"
+              >
                 <NavDropdown.Item href="#action/3.1">
                   멤버십 신청
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item href="/contract">
                   신탁 내역 확인
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item href="/MaintenanceFeeList">
                   관리비 납부내역
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item href="/signModified">
                   회원 정보 수정
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">
+                <NavDropdown.Item href="/withdrawal">
                   회원 탈퇴
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <Nav.Link href="../Signin" className="navlink">
+              <Nav.Link href="/signin" className="navlink">
                 로그인
               </Nav.Link>
             )}

@@ -1,18 +1,11 @@
 import React from "react";
 import PageHeader from "./PageHeader";
 import { Container, Table, Form } from "react-bootstrap";
-import PostFixInput from "./PostFixInput";
 
 //Trust Output
 const Trust = () => {
   return (
-    <Container>
-      <PostFixInput
-        labelText="소재지"
-        postfix="만원"
-        type="text"
-        placeholder="주소"
-      />
+    <Container style={{ marginTop: "180px" }}>
       <PageHeader>계약 신탁</PageHeader>
       <Table bordered={true}>
         <tbody>

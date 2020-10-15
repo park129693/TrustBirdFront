@@ -28,7 +28,7 @@ const Main = () => {
         <div style={{ marginTop: 100 }}>
           {/* <Route component={Navbar} /> */}
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/main">
               <Home />
             </Route>
             <Route path="/foundationintro" exact>
