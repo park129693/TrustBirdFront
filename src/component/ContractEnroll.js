@@ -15,7 +15,7 @@ const ContractEnroll = () => {
               labelText="계약 소재지"
               postfix=""
               type="text"
-              placeholder="종류"
+              placeholder="주소"
             />
         </Form.Group>
 
@@ -73,14 +73,16 @@ const ContractEnroll = () => {
               placeholder="면적"
             />
         </Form.Group>
+        <div>
 
-        <Form.Group controlId="formBasicMonthly">
+        <Form.Group controlId="formBasicMonthly" style={{display: "inline-block", marginRight: "32px"}}>
           <Form.Check type="checkbox" label="월세" required />
         </Form.Group>
 
-        <Form.Group controlId="formBasicResevations">
+        <Form.Group controlId="formBasicResevations" style={{display: "inline-block",}}>
           <Form.Check type="checkbox" label="전세" required />
         </Form.Group>
+        </div>
 
         <Form.Group controlId="formBasicPeriod">
           <Form.Label> 임대 기간 </Form.Label>
