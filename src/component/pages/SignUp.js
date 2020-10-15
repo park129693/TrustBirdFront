@@ -27,7 +27,7 @@ const SignUp = () => {
       >
         회원가입
       </div> */}
-      <Form>
+      <Form style={{maxWidth:"100%"}}>
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 사용자 이름 </Form.Label>
           <Form.Control type="text" placeholder="사용자 이름 입력" required />

@@ -1,23 +1,24 @@
 import React from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Button, Container, Row, Col } from "react-bootstrap";
 
-import Menu from "./Menu";
-import Footer from "./Footer";
-import Home from "./Home";
-import FoundationIntro from "./FoundationIntro";
-import ServiceIntro from "./ServiceIntro";
-import TrustWay from "./TrustWay";
-import TrustSub from "./TrustSub";
-import Trust from "./Trust";
-import ContractList from "./ContractList";
-import ContractEnroll from "./ContractEnroll";
-import Contract from "./Contract";
-import MaintenanceFeeList from "./MaintenanceFeeList";
-import MaintenanceFee from "./MaintenanceFee";
-import SignModified from "./SignModified";
-import Withdrawal from "./Withdrawal";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
+import Menu from "./pages/Menu";
+import Footer from "./pages/Footer";
+import Home from "./pages/Home";
+import FoundationIntro from "./pages/FoundationIntro";
+import ServiceIntro from "./pages/ServiceIntro";
+import TrustWay from "./pages/TrustWay";
+import TrustSub from "./pages/TrustSub";
+import Trust from "./pages/Trust";
+import ContractList from "./pages/ContractList";
+import ContractEnroll from "./pages/ContractEnroll";
+import Contract from "./pages/Contract";
+import MaintenanceFeeList from "./pages/MaintenanceFeeList";
+import MaintenanceFee from "./pages/MaintenanceFee";
+import SignModified from "./pages/SignModified";
+import Withdrawal from "./pages/Withdrawal";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import Navbar from "../component/Navbar/Navbar";
 
 const Main = () => {
