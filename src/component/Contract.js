@@ -3,9 +3,7 @@ import PageHeader from "./PageHeader";
 
 //Contract Output
 const Contract = () => {
-  return (
-    <PageHeader>계약서</PageHeader>
-  );
+  return <PageHeader>계약서 보기</PageHeader>;
 };
 
 export default Contract;

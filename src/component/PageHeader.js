@@ -11,6 +11,7 @@ const PageHeader = ({ children }) => {
         color: " #3B72F2",
         fontWeight: "bold",
         textAlign: "center",
+        marginTop: "",
       }}
     >
       {children}
