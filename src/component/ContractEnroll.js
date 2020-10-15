@@ -67,7 +67,7 @@ const ContractEnroll = () => {
         <Form.Group controlId="formBasicPartOfLeaseArea">
           <Form.Label> 임대할 부분의 면적 </Form.Label>
             <PostFixInput
-              labelText="부동산종류"
+              labelText="부동산 종류"
               postfix="㎡"
               type="text"
               placeholder="면적"
