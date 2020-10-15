@@ -6,7 +6,7 @@ import { Container, Form, Button } from "react-bootstrap";
 const ContractEnroll = () => {
   return (
     <Container>
-      <PageHeader>계약서 등록</PageHeader>;
+      <PageHeader>계약서 등록</PageHeader>
       <Form>
         <Form.Group controlId="formBasicLocation">
           <Form.Label> 계약 소재지 </Form.Label>
@@ -84,6 +84,71 @@ const ContractEnroll = () => {
         <Form.Group controlId="formBasicSpecialAgreement">
           <Form.Label> 특약사항 </Form.Label>
           <Form.Control type="text" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorAddress">
+          <Form.Label> 임대인의 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorRRN">
+          <Form.Label> 임대인의 주민번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorName">
+          <Form.Label> 임대인의 이름 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorTelephoneNum">
+          <Form.Label> 임대인의 휴대번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeAddress">
+          <Form.Label> 임차인의 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeRRN">
+          <Form.Label> 임차인의 주민번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeName">
+          <Form.Label> 임차인의 이름 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeTelephoneNum">
+          <Form.Label> 임차인의 휴대번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicRealtorAddress">
+          <Form.Label> 공인중개사의 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicRealtorOfficeName">
+          <Form.Label> 공인중개사의 사무실 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicRealtorName">
+          <Form.Label> 공인중개사 대표의 이름 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicRegistrationNum">
+          <Form.Label> 공인중개사의 등록번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicRealtorTelephoneNum">
+          <Form.Label> 공인중개사의 휴대번호 </Form.Label>
+          <Form.Control type="text" required />
         </Form.Group>
       </Form>
     </Container>

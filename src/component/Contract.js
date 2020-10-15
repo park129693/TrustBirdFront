@@ -1,23 +1,9 @@
 import React from "react";
+import PageHeader from "./PageHeader";
 
 //Contract Output
 const Contract = () => {
-  return (
-    <div
-      style={{
-        fontSize: 24,
-        padding: "auto",
-        marginTop: "208px",
-        marginBottom: "32px",
-        marginTop: "208px",
-        color: " #3B72F2",
-        fontWeight: "bold",
-        textAlign: "center",
-      }}
-    >
-      계약서 보기
-    </div>
-  );
+  return <PageHeader>계약서 보기</PageHeader>;
 };
 
 export default Contract;

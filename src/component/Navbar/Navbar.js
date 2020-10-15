@@ -1,19 +1,18 @@
 import React from "react";
 
 import {
-  Button,
   Navbar as BootStrapNavbar,
-  Form,
   Nav,
-  FormControl,
   NavDropdown,
   Container,
 } from "react-bootstrap";
-import { Link, NavLink, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Logo from "../icons/LogoIcon";
 
 import "./Navbar.css";
+
+import pageLink from "./pageLink";
 
 export default function Navbar(props) {
   const [isLogined, setIsLogined] = React.useState(false);
@@ -73,9 +72,11 @@ export default function Navbar(props) {
               </Link>
             </Nav.Link>
 
-            <Nav.Link href="#link" className="navlink">
-              계약신탁
+            <Nav.Link className="navlink">
+              <pageLink to="/trust" />
+              신탁 계약
             </Nav.Link>
+
             <Nav.Link href="#service" className="navlink">
               정보소개
             </Nav.Link>

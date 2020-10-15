@@ -1,22 +1,9 @@
 import React from "react";
+import PageHeader from "./PageHeader";
 
 //Contract List
 const ContractList = () => {
-  return (
-    <div
-      style={{
-        fontSize: 24,
-        padding: "auto",
-        marginBottom: "32px",
-        marginTop: "208px",
-        color: " #3B72F2",
-        fontWeight: "bold",
-        textAlign: "center",
-      }}
-    >
-      계약서 목록
-    </div>
-  );
+  return <PageHeader>계약서 목록</PageHeader>;
 };
 
 //Contract List

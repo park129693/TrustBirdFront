@@ -1,21 +1,9 @@
 import React from "react";
+import PageHeader from "./PageHeader";
 
 //Service Introduce
 const ServiceIntro = () => {
-  return (
-    <div
-      style={{
-        fontSize: 24,
-        padding: "auto",
-        marginBottom: "32px",
-        color: " #3B72F2",
-        fontWeight: "bold",
-        textAlign: "center",
-      }}
-    >
-      서비스 소개
-    </div>
-  );
+  return <PageHeader>서비스 소개</PageHeader>;
 };
 
 export default ServiceIntro;
