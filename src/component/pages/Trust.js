@@ -1,12 +1,12 @@
 import React from "react";
-import PageHeader from "./PageHeader";
 import { Container, Table, Form } from "react-bootstrap";
+import "./Page.css"
 
 //Trust Output
 const Trust = () => {
   return (
     <Container style={{ maxWidth: "500px", margin: "auto" }}>
-      <PageHeader>계약 신탁</PageHeader>
+      <div className="pageheader">계약 신탁</div>
       <Table bordered={true}>
         <tbody>
           <tr>

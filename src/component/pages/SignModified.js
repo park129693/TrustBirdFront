@@ -1,34 +1,35 @@
 import React from "react";
 import { Container, Form, FormGroup, Button } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import "./Page.css"
+
 
 //Sign Modified
 const SignModified = () => {
   return (
     <Container style={{ maxWidth: "500px", margin: "auto" }}>
-      <PageHeader>회원정보 수정</PageHeader>
+      <div className="pageheader">회원정보 수정</div>
 
-      <Form style={{ maxWidth: "100%" }}>
+      <Form style={{ maxWidth: "100%" }} className="sign-form">
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 사용자 이름 </Form.Label>
           <Form.Control type="text" placeholder="사용자 이름 입력" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label> Email </Form.Label>
-          <Form.Control type="email" placeholder="Enter Email" required />
+          <Form.Label> 이메일 </Form.Label>
+          <Form.Control type="email" placeholder="이메일 입력" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label> Password </Form.Label>
-          <Form.Control type="password" placeholder="Enter password" required />
+          <Form.Label> 비밀번호 </Form.Label>
+          <Form.Control type="password" placeholder="비밀번호 입력" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicPasswordCheck">
-          <Form.Label> PasswordCheck </Form.Label>
+          <Form.Label> 비밀번호 확인 </Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter Password Check"
+            placeholder="비밀번호 확인"
             required
           />
         </Form.Group>
@@ -54,7 +55,7 @@ const SignModified = () => {
       <Button
         variant="primary"
         type="submit"
-        style={{ float: "right", marginTop: "16px" }}
+        style={{ float: "right", marginTop: "16px" ,marginBottom:"30px"}}
       >
         Submit
       </Button>

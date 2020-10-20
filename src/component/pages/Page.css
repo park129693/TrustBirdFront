@@ -1,0 +1,35 @@
+.pageheader {
+  font-size: 24px;
+  padding: auto;
+  margin-top: 180px;
+  margin-bottom: 32px;
+  color: #3b72f2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login {
+  font-size: 60px;
+  font-weight: bold;
+  display: inline-block;
+  color: #3b72f2;
+  vertical-align: middle;
+  margin-left: 16px;
+}
+
+.sign-form .form-group {
+  margin-bottom: 30px;
+}
+.button1 {
+  width: 500px;
+  float: right;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+.button2 {
+  width: 160px;
+  background-color: #3b72f2;
+  outline-color: #3b72f2;
+  display: inline-block;
+  font-size: 20px;
+}

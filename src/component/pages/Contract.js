@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Table, Form, Row, Col } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import { Container, Form, Row, Col } from "react-bootstrap";
+import "./Page.css";
 
 //Contract Output
 const Contract = () => {
   return (
     <Container style={{ maxWidth: "800px" }}>
-      <PageHeader>계약서 보기</PageHeader>
+      <div className="pageheader">계약서 보기</div>
       <Row style={{ border: "solid" }}>
         <Col sm={2}>소재지</Col>
         <Col sm={10}></Col>

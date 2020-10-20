@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
-import PageHeader from "./PageHeader";
-import { Link, useParams } from "react-router-dom";
-//useEffect
+
+import "./Page.css"
+//userEffect
+
 //Maintenance Fee List
 
 const MaintenanceFeeList = (props) => {
@@ -27,7 +28,7 @@ const MaintenanceFeeList = (props) => {
   });
   return (
     <Container>
-      <PageHeader>관리비 내역 목록</PageHeader>
+      <div className="pageheader">관리비 내역 목록</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <thead>
           <tr>
