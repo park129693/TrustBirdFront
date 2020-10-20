@@ -1,30 +1,20 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import PostFixInput from "./PostFixInput";
-import PageHeader from "./PageHeader";
 import Logo from "../icons/LogoIcon";
-import "../Navbar/Navbar.css";
+import "./Page.css"
 
 //Sign In
 const SignIn = () => {
   return (
     <Container style={{ maxWidth: "500px", margin: "auto" }}>
-      <div className="mainhead">
+      <div className="pageheader">
         <Logo />
-        <div
-          style={{
-            fontSize: 60,
-            fontWeight: "bold",
-            display: "inline-block",
-            color: "#3B72F2",
-            verticalAlign: "middle",
-            marginLeft: "16px",
-          }}
-        >
+        <div className="login">
           로그인
         </div>
       </div>
-      <Form style={{ width: "500px", marginTop: "5rem" }}>
+      <Form style={{ marginTop: "5rem" }} className="sign-form">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>이메일</Form.Label>
           <Form.Control type="email" placeholder="이메일" required />
@@ -47,6 +37,7 @@ const SignIn = () => {
             backgroundColor: "#3B72F2",
             outlineColor: "#3B72F2",
             marginTop: "16px",
+            marginBottom: "80"
           }}
         >
           로그인

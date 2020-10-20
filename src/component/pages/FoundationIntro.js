@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import "./Page.css"
 
 //Foundation Introduce
 const FoundationIntro = () => {
   return (
     <Container>
-      <PageHeader>재단 소개</PageHeader>
+      <div className="pageheader">재단 소개</div>
     </Container>
   );
 };

@@ -1,48 +1,13 @@
 import React from "react";
 import { Container, Table, Form } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import "./Page.css"
+
 
 //Contract Output
 const Contract = () => {
   return (
     <Container>
-      <PageHeader>계약서 보기</PageHeader>
-      <Table bordered={true}>
-        <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-        </tbody>
-      </Table>
+      <div className="pageheader">계약서 보기</div>
       <Form>
         <Form.Group>
           <Form.Label>기타 사항</Form.Label>

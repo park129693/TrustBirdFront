@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { Button, Container, Row, Col } from "react-bootstrap";
+import ReactFullpage from '@fullpage/react-fullpage'
 
-import Menu from "./pages/Menu";
 import Footer from "./pages/Footer";
 import Home from "./pages/Home";
 import FoundationIntro from "./pages/FoundationIntro";
@@ -21,8 +21,15 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Navbar from "../component/Navbar/Navbar";
 
+// const pluginWrapper = () => {
+//   require('./statics/fullpage.scrollHorizontally.min');
+// };
+
+
+
 const Main = () => {
   return (
+   
     <div>
       <Router>
         <Navbar />
@@ -31,6 +38,12 @@ const Main = () => {
           <Switch>
             <Route exact path="/main">
               <Home />
+            </Route>
+            <Route exact path="/">
+              <Home />
+           </Route>
+            <Route exact path="/home">
+            <Home />
             </Route>
             <Route path="/fundationintro" exact>
               <FoundationIntro />
