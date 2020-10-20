@@ -5,7 +5,7 @@ import { Container, Table, Form } from "react-bootstrap";
 //Trust Output
 const Trust = () => {
   return (
-    <Container style={{ marginTop: "180px" }}>
+    <Container style={{ maxWidth: "500px", margin: "auto" }}>
       <PageHeader>계약 신탁</PageHeader>
       <Table bordered={true}>
         <tbody>

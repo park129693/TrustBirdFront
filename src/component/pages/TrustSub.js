@@ -6,57 +6,58 @@ import PageHeader from "./PageHeader";
 //Trust Subscription
 const TrustSub = () => {
   return (
-    <Container>
-    <PageHeader>신탁 신청</PageHeader>
+    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+      <PageHeader>신탁 신청</PageHeader>
       <Form>
         <Form.Group controlId="formBasicType">
           <Form.Label> 신탁 부동산 종류 </Form.Label>
-      <PostFixInput
-        labelText="부동산종류"
-        postfix=""
-        type="text"
-        placeholder="종류"
-      />
+          <PostFixInput
+            labelText="부동산종류"
+            postfix=""
+            type="text"
+            placeholder="종류"
+          />
         </Form.Group>
 
         <Form.Group controlId="formBasicPrice">
           <Form.Label> 신탁 부동산 가격 </Form.Label>
-          
-      <PostFixInput
-        labelText="부동산가격"
-        postfix="만원"
-        type="text"
-        placeholder="금액"
-      />
+
+          <PostFixInput
+            labelText="부동산가격"
+            postfix="만원"
+            type="text"
+            placeholder="금액"
+          />
         </Form.Group>
 
         <Form.Group controlId="formBasicTrustProfit">
           <Form.Label> 원본의 수익 </Form.Label>
-                
-            <PostFixInput
-              labelText="원본의수익"
-              postfix="만원"
-              type="text"
-              placeholder="금액"
-            />
+
+          <PostFixInput
+            labelText="원본의수익"
+            postfix="만원"
+            type="text"
+            placeholder="금액"
+          />
         </Form.Group>
 
         <Form.Group controlId="formBasicNegligenceProfit">
           <Form.Label> 수익의 수익 </Form.Label>
-                
-            <PostFixInput
-              labelText="수익의수익"
-              postfix="만원"
-              type="text"
-              placeholder="금액"
-            />
+
+          <PostFixInput
+            labelText="수익의수익"
+            postfix="만원"
+            type="text"
+            placeholder="금액"
+          />
         </Form.Group>
 
-        <Form.Group controlId="formBasicMonthly">
+        <Form.Label>전．월세</Form.Label>
+        <Form.Group
+          controlId="formBasicMonthly"
+          style={{ textAlign: "center" }}
+        >
           <Form.Check type="checkbox" label="월세" required />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicResevations">
           <Form.Check type="checkbox" label="전세" required />
         </Form.Group>
 

@@ -27,29 +27,25 @@ const SignUp = () => {
       >
         회원가입
       </div> */}
-      <Form style={{maxWidth:"100%"}}>
+      <Form style={{ maxWidth: "100%" }}>
         <Form.Group controlId="formBasicUsername">
-          <Form.Label> 사용자 이름 </Form.Label>
-          <Form.Control type="text" placeholder="사용자 이름 입력" required />
+          <Form.Label> 이름 </Form.Label>
+          <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label> Email </Form.Label>
-          <Form.Control type="email" placeholder="Enter Email" required />
+          <Form.Label> 이메일 </Form.Label>
+          <Form.Control type="email" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label> Password </Form.Label>
-          <Form.Control type="password" placeholder="Enter password" required />
+          <Form.Label> 비밀번호 </Form.Label>
+          <Form.Control type="password" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicPasswordCheck">
-          <Form.Label> PasswordCheck </Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter Password Check"
-            required
-          />
+          <Form.Label> 비밀번호 재확인 </Form.Label>
+          <Form.Control type="password" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicDateOfBirth">
@@ -66,16 +62,16 @@ const SignUp = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicTelephoneNum">
-          <Form.Label> 휴대전화번호 </Form.Label>
-          <Form.Control type="text" placeholder="휴대전화번호 입력" required />
+          <Form.Label> 휴대전화 </Form.Label>
+          <Form.Control type="text" placeholder="전화번호 입력" required />
         </Form.Group>
       </Form>
       <Button
         variant="primary"
         type="submit"
-        style={{ float: "right", marginTop: "16px" }}
+        style={{ width: "100%", float: "right", marginTop: "16px" }}
       >
-        Submit
+        회원가입
       </Button>
     </Container>
   );

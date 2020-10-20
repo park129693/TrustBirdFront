@@ -32,7 +32,7 @@ const Main = () => {
             <Route exact path="/main">
               <Home />
             </Route>
-            <Route path="/foundationintro" exact>
+            <Route path="/fundationintro" exact>
               <FoundationIntro />
             </Route>
             <Route path="/serviceintro">

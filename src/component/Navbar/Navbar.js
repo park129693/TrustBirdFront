@@ -7,8 +7,6 @@ import {
   Container,
 } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
-
 import Logo from "../icons/LogoIcon";
 import "./Navbar.css";
 
