@@ -1,9 +1,12 @@
 import React from "react";
-import PageHeader from "./PageHeader";
+import "../Navbar/Navbar.css";
+import "./Page.css"
 
 //Contract List
 const ContractList = () => {
-  return <PageHeader>계약서 목록</PageHeader>;
+  return (
+  <div className="pageheader">계약서 목록</div>
+    );
 };
 
 //Contract List

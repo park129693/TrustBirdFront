@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Form } from "react-bootstrap";
 import PostFixInput from "./PostFixInput";
-import PageHeader from "./PageHeader";
+import "./Page.css"
 
 //Trust Subscription
 const TrustSub = () => {
   return (
     <Container style={{ maxWidth: "500px", margin: "auto" }}>
-      <PageHeader>신탁 신청</PageHeader>
+      <div className="pageheader">신탁 신청</div>
       <Form>
         <Form.Group controlId="formBasicType">
           <Form.Label> 신탁 부동산 종류 </Form.Label>

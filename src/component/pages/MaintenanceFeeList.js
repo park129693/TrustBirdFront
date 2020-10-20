@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import "./Page.css"
 //userEffect
 //Maintenance Fee List
 
@@ -24,7 +24,7 @@ const sampleData = [
 const MaintenanceFeeList = () => {
   return (
     <Container>
-      <PageHeader>관리비 내역 목록</PageHeader>
+      <div className="pageheader">관리비 내역 목록</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <thead>
           <tr>

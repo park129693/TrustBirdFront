@@ -1,33 +1,34 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
+import ReactFullpage from '@fullpage/react-fullpage'
+import "./Page.css"
 
 //Home
 const Home = () => {
-  return (
-    <Container>
-      <div>
-        <Row>
-          <Col
-            style={{
-              margintop: 139,
-              fontSize: 50,
-              fontWeight: "bold",
-            }}
-          >
-            우리는 당연한 일을 해드리는거죠
-            <br />
-            당신의 불편한 일들을
-          </Col>
-        </Row>
-        <Button href="./ServiceIntro"> 서비스소개</Button>
-      </div>
+  return(
+ 
+  <ReactFullpage
+  //fullpage options
+  scrollingSpeed = {1000} /* Options here */
 
-      <Row>
-        <Col>1 of 3</Col>
-        <Col xs={5}>2 of 3 (wider)</Col>
-        <Col>3 of 3</Col>
-      </Row>
-    </Container>
+  render={({ state, fullpageApi }) => {
+    return (
+      <Container>
+      <ReactFullpage.Wrapper>
+        <div className="section">
+          <p>Section 1 (welcome to fullpage.js)</p>
+          <button onClick={() => fullpageApi.moveSectionDown()}>
+            Click me to move down
+          </button>
+        </div>
+        <div className="section">
+          <p>Section 2</p>
+        </div>
+      </ReactFullpage.Wrapper>
+      </Container>
+    );
+  }}
+/>
   );
 };
 

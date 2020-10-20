@@ -1,13 +1,12 @@
 import React from "react";
-import PageHeader from "./PageHeader";
 import { Container, Form, Button } from "react-bootstrap";
 import PostFixInput from "./PostFixInput";
-
+import "./Page.css"
 //Contract Enrollment
 const ContractEnroll = () => {
   return (
     <Container>
-      <PageHeader>계약서 등록</PageHeader>
+      <div className="pageheader">계약서 등록</div>
 
       <Form style={{ maxWidth: "500px", margin: "auto" }}>
         <Form.Group controlId="formBasicLocation">

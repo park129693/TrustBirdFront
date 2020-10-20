@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
-import PageHeader from "./PageHeader";
+import "./Page.css"
 
 //Maintenance Fee
 const MaintenanceFee = () => {
   return (
     <Container>
-      <PageHeader>관리비 내역</PageHeader>
+      <div className="pageheader">관리비 내역</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <tbody>
           <tr>

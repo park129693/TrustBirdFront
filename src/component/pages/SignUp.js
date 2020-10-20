@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import PageHeader from "./PageHeader";
 import { Container, Form, Button } from "react-bootstrap";
+import "./Page.css"
 
 //Sign Up
 const SignUp = () => {
@@ -12,22 +12,9 @@ const SignUp = () => {
   //   const [setTelephoneNum,useTelephoneNum] = useState(setTelephoneNum,useTelephoneNum)
 
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
-      <PageHeader>회원가입</PageHeader>
-      {/* <div
-        style={{
-          fontSize: 24,
-          padding: "auto",
-          marginBottom: "32px",
-          marginTop: "208px",
-          color: " #3B72F2",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
-        회원가입
-      </div> */}
-      <Form style={{ maxWidth: "100%" }}>
+    <Container style={{ maxWidth: "500px", margin: "auto" , padding:"0"}}>
+      <div className="pageheader">회원가입</div>
+      <Form  className="sign-form">
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 이름 </Form.Label>
           <Form.Control type="text" required />
@@ -69,7 +56,7 @@ const SignUp = () => {
       <Button
         variant="primary"
         type="submit"
-        style={{ width: "100%", float: "right", marginTop: "16px" }}
+        className="button1"
       >
         회원가입
       </Button>
