@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
+
 import "./Page.css"
 //userEffect
+
 //Maintenance Fee List
 
-fetch("/api/user/maintenancefeelist");
+const MaintenanceFeeList = (props) => {
+  let { pageNo } = useParams();
 
-const sampleData = [
-  {
-    id: 1,
-    org: "a",
-    last: "ln",
-    name: "un",
-  },
-  {
-    id: 2,
-    org: "a",
-    last: "ln",
-    name: "un",
-  },
-];
+  pageNo = parseInt(pageNo);
 
-const MaintenanceFeeList = () => {
+  const [maintenanceFeeList, setMaintenanceFeeList] = useState("");
+
+  useEffect(() => {
+    fetch("/api/maintenancefeelist/list")
+      .then((res) => res.json())
+      .then((maintenanceFeeList) => {
+        setMaintenanceFeeList(maintenanceFeeList);
+      });
+  });
+
+  useEffect(() => {
+    fetch("/api/user/maintenancefeelist")
+      .then((res) => res.json())
+      .then();
+  });
   return (
     <Container>
       <div className="pageheader">관리비 내역 목록</div>
@@ -36,16 +40,38 @@ const MaintenanceFeeList = () => {
           </tr>
         </thead>
         <tbody>
-          {sampleData.map((elem) => {
+          {/* {maintenanceFeeList.map((elem) => {
             return (
               <tr>
-                <td>{elem.id}</td>
-                <td>{elem.org}</td>
-                <td>{elem.last}</td>
-                <td>{elem.name}</td>
+                <td>{elem.claimingAgency}</td>
+                <td>{elem.electronicPaymentNum}</td>
+                <td>{elem.dueDate}</td>
+                <td>{elem.amountDue}</td>
               </tr>
             );
-          })}
+          })} */}
+          {() => {
+            for (var i = 0; i < maintenanceFeeList.length; i++) {
+              return (
+                <tr>
+                  <td>{[i] + 1}</td>
+                  <td>{maintenanceFeeList[i].claimingAgency}</td>
+                  <td>{maintenanceFeeList[i].electronicPaymentNum}</td>
+                  <td>{maintenanceFeeList[i].dueDate}</td>
+                  <td>{maintenanceFeeList[i].amountDue}</td>
+                </tr>
+              );
+            }
+          }}
+          {/* <tr>
+            <td>1</td>
+            <td>d</td>
+            <td>d</td>
+            <td>d</td>
+            <td>
+              <Link to="/maintenancefee"> view</Link>
+            </td>
+          </tr> */}
         </tbody>
       </Table>
 
@@ -65,8 +91,16 @@ const MaintenanceFeeList = () => {
 
         <Pagination.Ellipsis />
         <Pagination.Item>{20}</Pagination.Item>
-        <Pagination.Next />
-        <Pagination.Last />
+
+        <Pagination.Next
+          onClick={(e) => {
+            console.log(props);
+          }}
+        >
+          <Link to={`${pageNo + 1}`}>
+            <span aria-hidden="true">›</span>
+          </Link>
+        </Pagination.Next>
       </Pagination>
     </Container>
   );
