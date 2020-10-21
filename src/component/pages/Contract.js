@@ -59,6 +59,7 @@ const Contract = () => {
         <Form.Group>
           <Form.Label>기타 사항</Form.Label>
           <Form.Control type="textarea" />
+          {/* 출력으로 변경 */}
         </Form.Group>
 
         <Row style={{ border: "solid" }}>
@@ -98,6 +99,7 @@ const Contract = () => {
         <Form.Group>
           <Form.Label>첨부 파일</Form.Label>
           <Form.Control type="textarea" />
+          {/* a 링크로 변경 */}
         </Form.Group>
       </Form>
     </Container>
