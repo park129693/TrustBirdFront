@@ -1,7 +1,10 @@
 import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import Homeimage from "../icons/Homeimage";
+import { Button, Container, Row, Col, Form } from "react-bootstrap";
 import ReactFullpage from '@fullpage/react-fullpage'
 import "./Page.css"
+import ServiceIntro from "./ServiceIntro"
+import FoundationIntro from "./FoundationIntro"
 
 //Home
 const Home = () => {
@@ -13,16 +16,19 @@ const Home = () => {
 
   render={({ state, fullpageApi }) => {
     return (
-      <Container>
+      <Container >
       <ReactFullpage.Wrapper>
-        <div className="section">
-          <p>Section 1 (welcome to fullpage.js)</p>
+        <div className="section" style={{maxWidth: "1200px"}}>
+          <Homeimage />
           <button onClick={() => fullpageApi.moveSectionDown()}>
             Click me to move down
           </button>
         </div>
         <div className="section">
-          <p>Section 2</p>
+          <ServiceIntro />
+        </div>
+        <div className="section">
+          <FoundationIntro />
         </div>
       </ReactFullpage.Wrapper>
       </Container>

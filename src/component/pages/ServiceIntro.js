@@ -3,7 +3,7 @@ import { Container, Card } from "react-bootstrap";
 import "./Page.css"
 
 //Service Introduce
-const ServiceIntro = () => {
+const ServiceIntro = (children) => {
   return (
     <Container>
     <div className="pageheader">서비스 소개</div>

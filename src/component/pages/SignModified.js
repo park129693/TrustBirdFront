@@ -51,14 +51,14 @@ const SignModified = () => {
           <Form.Label> 전화번호 </Form.Label>
           <Form.Control type="text" placeholder="전화번호 입력" required />
         </Form.Group>
-      </Form>
-      <Button
+        <Button
         variant="primary"
         type="submit"
         style={{ float: "right", marginTop: "16px" ,marginBottom:"30px"}}
       >
-        Submit
+        수정하기
       </Button>
+      </Form>
     </Container>
   );
 };

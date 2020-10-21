@@ -10,7 +10,7 @@ export default function LogoIcon() {
     >
       <g
         transform="translate(0.000000,1920.000000) scale(0.100000,-0.100000)"
-        fill=" #3B72F2"
+        fill="#3B72F2"
         stroke="none"
       >
         <path

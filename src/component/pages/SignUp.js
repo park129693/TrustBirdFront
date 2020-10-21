@@ -55,6 +55,7 @@ const SignUp = () => {
           <Form.Control type="text" placeholder="전화번호 입력" required />
         </Form.Group>
       </Form>
+      
       <Button
         variant="primary"
         type="submit"

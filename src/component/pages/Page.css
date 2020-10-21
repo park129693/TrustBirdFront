@@ -19,17 +19,33 @@
 
 .sign-form .form-group {
   margin-bottom: 30px;
+  margin-top: 30px;
 }
+
 .button1 {
   width: 500px;
   float: right;
   margin-top: 16px;
   margin-bottom: 30px;
+  background-color: #3b72f2;
+  outline-color: #3b72f2;
+  font-size: 20px;
 }
+
 .button2 {
   width: 160px;
   background-color: #3b72f2;
   outline-color: #3b72f2;
   display: inline-block;
   font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.fixinput {
+  top: 7px;
+  right: 9px;
+  position: absolute;
+  color: #777777;
+  cursor: default;
 }

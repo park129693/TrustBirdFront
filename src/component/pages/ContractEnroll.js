@@ -5,10 +5,11 @@ import "./Page.css"
 //Contract Enrollment
 const ContractEnroll = () => {
   return (
-    <Container>
+    <Container >
       <div className="pageheader">계약서 등록</div>
+      
 
-      <Form style={{ maxWidth: "500px", margin: "auto" }}>
+      <Form style={{ maxWidth: "500px", margin: "auto" }} className="sign-form">
         <Form.Group controlId="formBasicLocation">
           <Form.Label> 계약 소재지 </Form.Label>
           <PostFixInput
@@ -123,6 +124,7 @@ const ContractEnroll = () => {
             placeholder="금액"
           />
         </Form.Group>
+        
 
         <Form.Group controlId="formBasicBalance">
           <Form.Label> 잔금</Form.Label>
@@ -204,10 +206,22 @@ const ContractEnroll = () => {
           <Form.Control type="text" required />
         </Form.Group>
 
+      
         <Form.Group controlId="formBasicRealtorTelephoneNum">
           <Form.Label> 공인중개사의 휴대번호 </Form.Label>
           <Form.Control type="text" required />
+          
         </Form.Group>
+        
+      <Button
+        variant="primary"
+        type="submit"
+        className="button1"
+      >
+        저장하기
+        
+      </Button>
+        
       </Form>
     </Container>
   );
