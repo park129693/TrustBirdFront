@@ -6,7 +6,7 @@ import "./Page.css"
 //Sign Modified
 const SignModified = () => {
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+    <Container  >
       <div className="pageheader">회원정보 수정</div>
 
       <Form style={{ maxWidth: "100%" }} className="sign-form">
@@ -51,14 +51,14 @@ const SignModified = () => {
           <Form.Label> 전화번호 </Form.Label>
           <Form.Control type="text" placeholder="전화번호 입력" required />
         </Form.Group>
-      </Form>
-      <Button
+        <Button
         variant="primary"
         type="submit"
         style={{ float: "right", marginTop: "16px" ,marginBottom:"30px"}}
       >
-        Submit
+        수정하기
       </Button>
+      </Form>
     </Container>
   );
 };

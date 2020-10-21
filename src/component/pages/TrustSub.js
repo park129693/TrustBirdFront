@@ -6,7 +6,7 @@ import "./Page.css"
 //Trust Subscription
 const TrustSub = () => {
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+    <Container >
       <div className="pageheader">신탁 신청</div>
       <Form>
         <Form.Group controlId="formBasicType">

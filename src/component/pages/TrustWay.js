@@ -6,7 +6,7 @@ import { Container, Card } from "react-bootstrap";
 //Turst Way
 const TrustWay = () => {
   return ( 
-    <Container>
+    <Container  >
     <div className="pageheader">신탁 방법</div>
       <Card>
       <Card.Img variant="top" src="holder.js/100px180" />

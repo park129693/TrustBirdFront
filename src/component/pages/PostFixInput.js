@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import "./Page.css"
 
 const PostFixInput = ({ type, placeholder, postfix, onChange, ...props }) => {
   return (
@@ -13,13 +14,7 @@ const PostFixInput = ({ type, placeholder, postfix, onChange, ...props }) => {
         {...props}
       />
       <span
-        style={{
-          top: 7,
-          right: 9,
-          position: "absolute",
-          color: "#888888",
-          cursor: "default",
-        }}
+      className="fixinput"
       >
         {postfix}
       </span>

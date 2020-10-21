@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Container, Table, Pagination } from "react-bootstrap";
-
+import React, { useEffect, useState, useParams } from "react";
+import { Container, Table, Pagination, Link } from "react-bootstrap";
 import "./Page.css"
+
+
+
 //userEffect
 
 //Maintenance Fee List
@@ -27,7 +29,7 @@ const MaintenanceFeeList = (props) => {
       .then();
   });
   return (
-    <Container>
+    <Container >
       <div className="pageheader">관리비 내역 목록</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <thead>
@@ -97,9 +99,9 @@ const MaintenanceFeeList = (props) => {
             console.log(props);
           }}
         >
-          <Link to={`${pageNo + 1}`}>
-            <span aria-hidden="true">›</span>
-          </Link>
+          {/* <Link to={`${pageNo + 1}`}> */}
+            {/* <span aria-hidden="true">›</span> */}
+          {/* </Link> */}
         </Pagination.Next>
       </Pagination>
     </Container>
