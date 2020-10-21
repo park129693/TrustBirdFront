@@ -97,9 +97,9 @@ const MaintenanceFeeList = (props) => {
             console.log(props);
           }}
         >
-          <Link to={`${pageNo + 1}`}>
-            <span aria-hidden="true">›</span>
-          </Link>
+          {/* <Link to={`${pageNo + 1}`}> */}
+          {/* <span aria-hidden="true">›</span> */}
+          {/* </Link> */}
         </Pagination.Next>
       </Pagination>
     </Container>

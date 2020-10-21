@@ -15,7 +15,7 @@ const MaintenanceFee = (props) => {
   // props, useEffect, useState
   // useHistroy 라우터로 main
   return (
-    <Container>
+    <Container >
       <div className="pageheader">관리비 내역</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <tbody>

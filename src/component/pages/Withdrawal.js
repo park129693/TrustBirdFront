@@ -6,7 +6,7 @@ import "./Page.css"
 //Withdrawal
 const Withdrawal = () => {
   return (
-    <Container >
+    <Container className="containerborder" >
       <div className="pageheader" style={{fontSize:"30px"}}>회원탈퇴</div>
       <div
         style={{

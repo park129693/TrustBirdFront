@@ -1,14 +1,15 @@
 import React from "react";
 import { Container, Card } from "react-bootstrap";
+import serviceimage from "../icons/부동산2.svg"
 import "./Page.css"
 
 //Service Introduce
-const ServiceIntro = () => {
+const ServiceIntro = (children) => {
   return (
-    <Container>
+    <Container >
     <div className="pageheader">서비스 소개</div>
-      <Card>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card className="cardlayout">
+      <Card.Img variant="top" src={serviceimage} className="imagesize" />
       <Card.Body>
         <Card.Text>
           Some quick example text to build on the card title and make up the bulk

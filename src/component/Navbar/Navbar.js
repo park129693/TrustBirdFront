@@ -31,7 +31,7 @@ export default function Navbar(props) {
         background: "white",
       }}
     >
-      <Container>
+      <Container style={{margin:"auto", maxWidth:"1500px" }}>
         <BootStrapNavbar.Brand href="/main">
           <div>
             <div style={{ display: "inline-block" }}>
