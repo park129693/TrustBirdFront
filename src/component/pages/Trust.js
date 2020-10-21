@@ -1,48 +1,36 @@
 import React from "react";
-import { Container, Table, Form } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import "./Page.css"
 
 //Trust Output
 const Trust = () => {
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+    <Container style={{ maxWidth: "800px"}} >
       <div className="pageheader">계약 신탁</div>
-      <Table bordered={true}>
-        <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>{" "}
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>{" "}
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>
+      <Row >
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
+        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+      </Row>
       <Form>
         <Form.Group>
           <Form.Label>기타 사항</Form.Label>

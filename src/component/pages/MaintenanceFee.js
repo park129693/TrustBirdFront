@@ -5,7 +5,7 @@ import "./Page.css"
 //Maintenance Fee
 const MaintenanceFee = () => {
   return (
-    <Container>
+    <Container >
       <div className="pageheader">관리비 내역</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <tbody>

@@ -7,7 +7,7 @@ import "./Page.css"
 //Sign In
 const SignIn = () => {
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+    <Container  >
       <div className="pageheader">
         <Logo />
         <div className="login">

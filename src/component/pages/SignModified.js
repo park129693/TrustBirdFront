@@ -6,7 +6,7 @@ import "./Page.css"
 //Sign Modified
 const SignModified = () => {
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" }}>
+    <Container  >
       <div className="pageheader">회원정보 수정</div>
 
       <Form style={{ maxWidth: "100%" }} className="sign-form">

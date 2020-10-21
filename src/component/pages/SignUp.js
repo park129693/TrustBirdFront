@@ -1,4 +1,3 @@
-
 import React, { Fragment } from "react";
 
 import { Container, Form, Button } from "react-bootstrap";
@@ -14,7 +13,7 @@ const SignUp = () => {
   //   const [setTelephoneNum,useTelephoneNum] = useState(setTelephoneNum,useTelephoneNum)
 
   return (
-    <Container style={{ maxWidth: "500px", margin: "auto" , padding:"0"}}>
+    <Container  >
       <div className="pageheader">회원가입</div>
       <Form  className="sign-form">
         <Form.Group controlId="formBasicUsername">

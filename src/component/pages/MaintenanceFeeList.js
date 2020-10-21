@@ -29,7 +29,7 @@ const MaintenanceFeeList = (props) => {
       .then();
   });
   return (
-    <Container>
+    <Container >
       <div className="pageheader">관리비 내역 목록</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <thead>

@@ -1,6 +1,6 @@
 import React from "react";
-import Homeimage from "../icons/Homeimage";
-import { Button, Container, Row, Col, Form } from "react-bootstrap";
+import homeimage from "../icons/부동산 1.jpg"
+import { Card, Button, Container, Row, Col, Form } from "react-bootstrap";
 import ReactFullpage from '@fullpage/react-fullpage'
 import "./Page.css"
 import ServiceIntro from "./ServiceIntro"
@@ -18,14 +18,15 @@ const Home = () => {
     return (
       <Container >
       <ReactFullpage.Wrapper>
-        <div className="section" style={{maxWidth: "1200px"}}>
-          <Homeimage />
+        <div className={"section"} style={{maxWidth: "1200px"}} >
+          <img src={homeimage}  />
           <button onClick={() => fullpageApi.moveSectionDown()}>
             Click me to move down
           </button>
         </div>
         <div className="section">
           <ServiceIntro />
+          
         </div>
         <div className="section">
           <FoundationIntro />

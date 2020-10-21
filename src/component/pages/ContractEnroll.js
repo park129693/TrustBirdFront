@@ -5,7 +5,7 @@ import "./Page.css"
 //Contract Enrollment
 const ContractEnroll = () => {
   return (
-    <Container >
+    <Container>
       <div className="pageheader">계약서 등록</div>
       
 

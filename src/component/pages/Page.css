@@ -1,11 +1,18 @@
 .pageheader {
   font-size: 24px;
   padding: auto;
-  margin-top: 180px;
+  margin-top: 30px;
   margin-bottom: 32px;
   color: #3b72f2;
   font-weight: bold;
   text-align: center;
+}
+
+.containerborder {
+  border: 1px solid #3b72f2;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 200px;
 }
 
 .login {
@@ -48,4 +55,36 @@
   position: absolute;
   color: #777777;
   cursor: default;
+}
+
+.imagesize {
+  resize: both; /* 이미지 최대 사이즈에 적용 */
+  max-width: 1000px; /* 넓이를 지정 */
+  height: 500px; /* 높이를 지정 */
+}
+.cardlayout {
+  align-items: center;
+  border: 1px solid #3b72f2;
+  margin-bottom: 600px;
+}
+
+.collayout {
+  border: 1px solid;
+  border-collapse: collapse;
+  border-bottom-style: hidden;
+  border-right-style: hidden;
+}
+.collayout2 {
+  border: 1px solid;
+  border-collapse: collapse;
+  border-bottom-style: hidden;
+}
+.collayout3 {
+  border: 1px solid;
+  border-collapse: collapse;
+  border-right-style: hidden;
+}
+.collayout4 {
+  border: 1px solid;
+  border-collapse: collapse;
 }
