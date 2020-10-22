@@ -8,28 +8,28 @@ const Trust = () => {
     <Container style={{ maxWidth: "800px"}} >
       <div className="pageheader">계약 신탁</div>
       <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
-      </Row>{" "}
-      <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
-      </Row>{" "}
-      <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
       </Row>
       <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
       </Row>
       <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
       </Row>
       <Row >
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={2}>소재지</Col>
-        <Col style={{ border: "1px solid", borderCollapse:"collapse"  }} sm={10}></Col>
+        <Col className="collayout" sm={2}>소재지</Col>
+        <Col className="collayout2"sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout" sm={2}>소재지</Col>
+        <Col className="collayout2"sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout3"  sm={2}>소재지</Col>
+        <Col className="collayout4" sm={10}></Col>
       </Row>
       <Form>
         <Form.Group>
