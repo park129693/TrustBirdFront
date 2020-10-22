@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Navbar as BootStrapNavbar,
   Nav,
@@ -31,7 +30,7 @@ export default function Navbar(props) {
         background: "white",
       }}
     >
-      <Container style={{margin:"auto", maxWidth:"1500px" }}>
+      <Container style={{ margin: "auto", maxWidth: "1500px" }}>
         <BootStrapNavbar.Brand href="/main">
           <div>
             <div style={{ display: "inline-block" }}>

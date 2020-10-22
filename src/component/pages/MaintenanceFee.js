@@ -1,78 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import "./Page.css";
 
 //Maintenance Fee
-const MaintenanceFee = (props) => {
-  // const [maintenaceFee, setMaintenanceFee] = useState({});
+const MaintenanceFee = () => {
+  const { mfNum } = useParams();
 
-  // useEffect((props) => {
-  //   fetch().then(() => {
-  //     setMaintenanceFee();
-  //   });
-  // }, []);
+  const [maintenaceFee, setMaintenanceFee] = useState({
+    claimingAgency: "",
+    electronicPaymentNum: "",
+    dueDate: "",
+    deadline: "",
+    amountDeadline: "",
+    payment: "",
+  });
+
+  useEffect(() => {
+    fetch("/api/maintenacefee/find").then((maintenaceFee) => {
+      setMaintenanceFee(maintenaceFee);
+    });
+  });
 
   // props, useEffect, useState
   // useHistroy 라우터로 main
   return (
-    <Container >
+    <Container>
       <div className="pageheader">관리비 내역</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <tbody>
           <tr>
-            <td>Mark</td>
-            {/* <td>{maintenaceFee.electronicPaymentNum}</td> */}
+            <td>관리비 청구기관</td>
+            <td>{maintenaceFee.claimingAgency}</td>
           </tr>
           <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>관리비 전자납부번호</td>
+            <td>{maintenaceFee.electronicPaymentNum}</td>
           </tr>
           <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>관리비 납기 내 기한</td>
+            <td>{maintenaceFee.dueDate}</td>
           </tr>
           <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>관리비 납기 후 기한</td>
+            <td>{maintenaceFee.deadLine}</td>
           </tr>
           <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>관리비 납기 후 금액</td>
+            <td>{maintenaceFee.amountDeadline}</td>
           </tr>
           <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>관리비 납부금액</td>
+            <td>{maintenaceFee.payment}</td>
           </tr>
         </tbody>
       </Table>
-
-      <Pagination
-        style={{ marginBottom: "50px", margin: "auto", width: "fit-content" }}
-      >
-        <Pagination.First />
-        <Pagination.Prev />
-        <Pagination.Item>{1}</Pagination.Item>
-        <Pagination.Ellipsis />
-
-        <Pagination.Item>{10}</Pagination.Item>
-        <Pagination.Item>{11}</Pagination.Item>
-        <Pagination.Item active>{12}</Pagination.Item>
-        <Pagination.Item>{13}</Pagination.Item>
-        <Pagination.Item disabled>{14}</Pagination.Item>
-
-        <Pagination.Ellipsis />
-        <Pagination.Item>{20}</Pagination.Item>
-        <Pagination.Next />
-        <Pagination.Last />
-      </Pagination>
     </Container>
   );
 };

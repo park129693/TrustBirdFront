@@ -6,12 +6,13 @@ import "./Page.css";
 //userEffect
 
 //Maintenance Fee List
-const history = useHistory();
 
 const MaintenanceFeeList = (props) => {
   let { pageNo } = useParams();
 
   pageNo = parseInt(pageNo);
+
+  let history = useHistory();
 
   const handleEvent = (e) => {
     e.preventDefault();
@@ -23,14 +24,15 @@ const MaintenanceFeeList = (props) => {
     if (!handleEvent) {
       fetch("/api/maintenancefeelist/list")
         .then((res) => res.json())
-        .then(
-          (maintenanceFeeList) => {
-            setMaintenanceFeeList(maintenanceFeeList);
-          },
-          [maintenanceFeeList]
-        );
+        .then((maintenanceFeeList) => {
+          setMaintenanceFeeList(maintenanceFeeList);
+        });
     }
     if (handleEvent) {
+      history.push({
+        pathname: "/maintenancefee",
+        state: { maintenanceFeeList: maintenanceFeeList },
+      });
     }
   });
   return (
@@ -54,6 +56,11 @@ const MaintenanceFeeList = (props) => {
                 <td>{elem.electronicPaymentNum}</td>
                 <td>{elem.dueDate}</td>
                 <td>{elem.amountDue}</td>
+                <td>
+                  <Link to="/maintenancefee" onClick={handleEvent}>
+                    <Button>관리비 내역</Button>
+                  </Link>
+                </td>
               </tr>
             );
           })} */}
