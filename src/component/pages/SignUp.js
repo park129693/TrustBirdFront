@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import { Container, Form, Button } from "react-bootstrap";
-import "./Page.css"
+import "./Page.css";
 
 //Sign Up
 const SignUp = () => {
@@ -15,7 +15,7 @@ const SignUp = () => {
   return (
     <Container style={{maxWidth:"800px"}}>
       <div className="pageheader">회원가입</div>
-      <Form  className="sign-form">
+      <Form className="sign-form">
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 이름 </Form.Label>
           <Form.Control type="text" required />
@@ -53,8 +53,7 @@ const SignUp = () => {
           <Form.Label> 휴대전화 </Form.Label>
           <Form.Control type="text" placeholder="전화번호 입력" required />
         </Form.Group>
-      </Form>
-      
+      </Form>      
       <Button
         variant="primary"
         type="submit"

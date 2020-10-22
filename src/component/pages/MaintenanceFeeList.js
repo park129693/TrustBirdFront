@@ -1,35 +1,40 @@
-import React, { useEffect, useState, useParams } from "react";
-import { Container, Table, Pagination, Link } from "react-bootstrap";
-import "./Page.css"
+import React, { useEffect, useState } from "react";
+import { Container, Table, Pagination, Button } from "react-bootstrap";
+import { Link, useParams, useHistory } from "react-router-dom";
 
-
-
+import "./Page.css";
 //userEffect
 
 //Maintenance Fee List
+const history = useHistory();
 
 const MaintenanceFeeList = (props) => {
   let { pageNo } = useParams();
 
   pageNo = parseInt(pageNo);
 
+  const handleEvent = (e) => {
+    e.preventDefault();
+  };
+
   const [maintenanceFeeList, setMaintenanceFeeList] = useState("");
 
-  useEffect(() => {
-    fetch("/api/maintenancefeelist/list")
-      .then((res) => res.json())
-      .then((maintenanceFeeList) => {
-        setMaintenanceFeeList(maintenanceFeeList);
-      });
-  });
-
-  useEffect(() => {
-    fetch("/api/user/maintenancefeelist")
-      .then((res) => res.json())
-      .then();
+  useEffect((handleEvent) => {
+    if (!handleEvent) {
+      fetch("/api/maintenancefeelist/list")
+        .then((res) => res.json())
+        .then(
+          (maintenanceFeeList) => {
+            setMaintenanceFeeList(maintenanceFeeList);
+          },
+          [maintenanceFeeList]
+        );
+    }
+    if (handleEvent) {
+    }
   });
   return (
-    <Container >
+    <Container>
       <div className="pageheader">관리비 내역 목록</div>
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <thead>
@@ -61,19 +66,15 @@ const MaintenanceFeeList = (props) => {
                   <td>{maintenanceFeeList[i].electronicPaymentNum}</td>
                   <td>{maintenanceFeeList[i].dueDate}</td>
                   <td>{maintenanceFeeList[i].amountDue}</td>
+                  <td>
+                    <Link to="/maintenancefee" onClick={handleEvent}>
+                      <Button>관리비 내역</Button>
+                    </Link>
+                  </td>
                 </tr>
               );
             }
           }}
-          {/* <tr>
-            <td>1</td>
-            <td>d</td>
-            <td>d</td>
-            <td>d</td>
-            <td>
-              <Link to="/maintenancefee"> view</Link>
-            </td>
-          </tr> */}
         </tbody>
       </Table>
 
@@ -81,18 +82,15 @@ const MaintenanceFeeList = (props) => {
         style={{ marginBottom: "50px", margin: "auto", width: "fit-content" }}
       >
         <Pagination.First />
-        <Pagination.Prev />
-        <Pagination.Item>{1}</Pagination.Item>
-        <Pagination.Ellipsis />
-
-        <Pagination.Item>{10}</Pagination.Item>
-        <Pagination.Item>{11}</Pagination.Item>
-        <Pagination.Item active>{12}</Pagination.Item>
-        <Pagination.Item>{13}</Pagination.Item>
-        <Pagination.Item disabled>{14}</Pagination.Item>
-
-        <Pagination.Ellipsis />
-        <Pagination.Item>{20}</Pagination.Item>
+        <Pagination.Prev
+          onClick={(e) => {
+            console.log(props);
+          }}
+        >
+          <Link to={`${pageNo - 1}`}>
+            <span aria-hidden="true">›</span>
+          </Link>
+        </Pagination.Prev>
 
         <Pagination.Next
           onClick={(e) => {
@@ -100,7 +98,7 @@ const MaintenanceFeeList = (props) => {
           }}
         >
           {/* <Link to={`${pageNo + 1}`}> */}
-            {/* <span aria-hidden="true">›</span> */}
+          {/* <span aria-hidden="true">›</span> */}
           {/* </Link> */}
         </Pagination.Next>
       </Pagination>

@@ -1,9 +1,19 @@
 import React from "react";
 import { Container, Table, Pagination } from "react-bootstrap";
-import "./Page.css"
+import "./Page.css";
 
 //Maintenance Fee
-const MaintenanceFee = () => {
+const MaintenanceFee = (props) => {
+  // const [maintenaceFee, setMaintenanceFee] = useState({});
+
+  // useEffect((props) => {
+  //   fetch().then(() => {
+  //     setMaintenanceFee();
+  //   });
+  // }, []);
+
+  // props, useEffect, useState
+  // useHistroy 라우터로 main
   return (
     <Container >
       <div className="pageheader">관리비 내역</div>
@@ -11,7 +21,7 @@ const MaintenanceFee = () => {
         <tbody>
           <tr>
             <td>Mark</td>
-            <td>Otto</td>
+            {/* <td>{maintenaceFee.electronicPaymentNum}</td> */}
           </tr>
           <tr>
             <td>Jacob</td>
