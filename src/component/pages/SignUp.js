@@ -13,7 +13,7 @@ const SignUp = () => {
   //   const [setTelephoneNum,useTelephoneNum] = useState(setTelephoneNum,useTelephoneNum)
 
   return (
-    <Container  >
+    <Container style={{maxWidth:"800px"}}>
       <div className="pageheader">회원가입</div>
       <Form  className="sign-form">
         <Form.Group controlId="formBasicUsername">
@@ -58,7 +58,7 @@ const SignUp = () => {
       <Button
         variant="primary"
         type="submit"
-        className="button1"
+        className="button3"
       >
         회원가입
       </Button>

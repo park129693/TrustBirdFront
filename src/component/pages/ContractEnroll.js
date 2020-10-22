@@ -75,19 +75,19 @@ const ContractEnroll = () => {
             />
         </Form.Group>
         <div>
-          <Form.Group
+           <Form.Label>전 · 월세</Form.Label><br/>
+          <Form
             controlId="formBasicMonthly"
             style={{ display: "inline-block", marginRight: "32px" }}
           >
-            <Form.Check type="checkbox" label="월세" required />
-          </Form.Group>
-
-          <Form.Group
+            <Form.Check type="checkbox" label="전세" required />
+          </Form>
+          <Form
             controlId="formBasicResevations"
             style={{ display: "inline-block" }}
           >
-            <Form.Check type="checkbox" label="전세" required />
-          </Form.Group>
+            <Form.Check type="checkbox" label="월세" required />
+          </Form>
         </div>
 
         <Form.Group controlId="formBasicPeriod">
