@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Table, Pagination } from "react-bootstrap";
+import { Container, Table, Pagination, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import "./Page.css";
 
@@ -30,7 +30,7 @@ const MaintenanceFee = () => {
       <Table bordered={true} style={{ marginBottom: "100px" }}>
         <tbody>
           <tr>
-            <td>관리비 청구기관</td>
+            <Col className="collayout4" sm={4}>관리비 청구기관</Col>
             <td>{maintenaceFee.claimingAgency}</td>
           </tr>
           <tr>

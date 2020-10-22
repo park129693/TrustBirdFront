@@ -1,7 +1,7 @@
 .pageheader {
   font-size: 32px;
   padding: auto;
-  margin-top: 30px;
+  margin-top: 150px;
   margin-bottom: 32px;
   color: #3b72f2;
   font-weight: bold;
@@ -58,6 +58,16 @@
   margin-bottom: 30px;
 }
 
+.button4 {
+  width: 160px;
+  background-color: #8fb5ef;
+  outline-color: #8fb5ef;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
 .fixinput {
   top: 7px;
   right: 9px;
@@ -83,18 +93,22 @@
   border-collapse: collapse;
   border-bottom-style: hidden;
   border-right-style: hidden;
+  padding: 12px;
 }
 .collayout2 {
   border: 1px solid;
   border-collapse: collapse;
   border-bottom-style: hidden;
+  padding: 12px;
 }
 .collayout3 {
   border: 1px solid;
   border-collapse: collapse;
   border-right-style: hidden;
+  padding: 12px;
 }
 .collayout4 {
   border: 1px solid;
   border-collapse: collapse;
+  padding: 12px;
 }
