@@ -5,6 +5,7 @@ import {
   NavDropdown,
   Container,
 } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 import Logo from "../icons/LogoIcon";
 import "./Navbar.css";
@@ -83,7 +84,7 @@ export default function Navbar(props) {
                 <NavDropdown.Item href="/contract">
                   신탁 내역 확인
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/maintenancefeelist">
+                <NavDropdown.Item href="/maintenancefeelist/1">
                   관리비 납부내역
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/signModified">

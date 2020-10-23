@@ -98,16 +98,16 @@ const MaintenanceFeeList = (props) => {
             <span aria-hidden="true">›</span>
           </Link>
         </Pagination.Prev>
-
         <Pagination.Next
           onClick={(e) => {
             console.log(props);
           }}
         >
-          {/* <Link to={`${pageNo + 1}`}> */}
-          {/* <span aria-hidden="true">›</span> */}
-          {/* </Link> */}
+          <Link to={`${pageNo + 1}`}>
+            <span aria-hidden="true">›</span>
+          </Link>
         </Pagination.Next>
+        <Pagination.Last />
       </Pagination>
     </Container>
   );

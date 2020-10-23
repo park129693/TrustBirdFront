@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Container, Table, Pagination } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Container, Table } from "react-bootstrap";
 import "./Page.css";
 
 //Maintenance Fee
 const MaintenanceFee = () => {
-  const { mfNum } = useParams();
-
   const [maintenaceFee, setMaintenanceFee] = useState({
     claimingAgency: "",
     electronicPaymentNum: "",
