@@ -7,9 +7,7 @@ const ContractEnroll = () => {
   return (
     <Container>
       <div className="pageheader">계약서 등록</div>
-      
-
-      <Form style={{ maxWidth: "500px", margin: "auto" }} className="sign-form">
+      <Form style={{ maxWidth: "800px", margin: "auto" }} className="sign-form">
         <Form.Group controlId="formBasicLocation">
           <Form.Label> 계약 소재지 </Form.Label>
           <PostFixInput
@@ -75,6 +73,7 @@ const ContractEnroll = () => {
             />
         </Form.Group>
         <div>
+          <Form.Group>
            <Form.Label>전 · 월세</Form.Label><br/>
           <Form
             controlId="formBasicMonthly"
@@ -88,6 +87,7 @@ const ContractEnroll = () => {
           >
             <Form.Check type="checkbox" label="월세" required />
           </Form>
+          </Form.Group>
         </div>
 
         <Form.Group controlId="formBasicPeriod">
@@ -152,76 +152,61 @@ const ContractEnroll = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicLessorRRN">
-          <Form.Label> 임대인의 주민번호 </Form.Label>
+          <Form.Label> 임대인 주민번호 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLessorName">
-          <Form.Label> 임대인의 이름 </Form.Label>
+          <Form.Label> 임대인 이름 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLessorTelephoneNum">
-          <Form.Label> 임대인의 휴대번호 </Form.Label>
+          <Form.Label> 임대인 휴대번호 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLesseeAddress">
-          <Form.Label> 임차인의 주소 </Form.Label>
+          <Form.Label> 임차인 주소 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLesseeRRN">
-          <Form.Label> 임차인의 주민번호 </Form.Label>
+          <Form.Label> 임차인 주민번호 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLesseeName">
-          <Form.Label> 임차인의 이름 </Form.Label>
+          <Form.Label> 임차인 이름 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicLesseeTelephoneNum">
-          <Form.Label> 임차인의 휴대번호 </Form.Label>
+          <Form.Label> 임차인 휴대번호 </Form.Label>
           <Form.Control type="text" required />
         </Form.Group>
 
-        <Form.Group controlId="formBasicRealtorAddress">
-          <Form.Label> 공인중개사의 주소 </Form.Label>
-          <Form.Control type="text" required />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicRealtorOfficeName">
-          <Form.Label> 공인중개사의 사무실 주소 </Form.Label>
-          <Form.Control type="text" required />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicRealtorName">
-          <Form.Label> 공인중개사 대표의 이름 </Form.Label>
-          <Form.Control type="text" required />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicRegistrationNum">
-          <Form.Label> 공인중개사의 등록번호 </Form.Label>
-          <Form.Control type="text" required />
-        </Form.Group>
-
-      
-        <Form.Group controlId="formBasicRealtorTelephoneNum">
-          <Form.Label> 공인중개사의 휴대번호 </Form.Label>
-          <Form.Control type="text" required />
+        <Form.Group style={{display:"table-caption"}}>
+          <Form.Label controlId="formBasicRealtorAddress"> 
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorOfficeName">  
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorName">
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRegistrationNum"> 
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorTelephoneNum">
+          <input type="text" required /></Form.Label>
           
         </Form.Group>
         
-      <Button
-        variant="primary"
-        type="submit"
-        className="button1"
-      >
-        저장하기
-        
-      </Button>
-        
+        <Button
+          variant="primary"
+          type="submit"
+          className="button3"
+        >
+          저장하기
+        </Button>
       </Form>
     </Container>
   );
