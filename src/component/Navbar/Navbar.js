@@ -37,18 +37,10 @@ export default function Navbar(props) {
             <div style={{ display: "inline-block" }}>
               <Logo />
             </div>
-            <h3
-              style={{
-                fontSize: 24,
-                display: "inline-block",
-                marginLeft: "16px",
-                marginBottom: "0",
-                color: " #3B72F2",
-                fontWeight: "bold",
-              }}
+            <div className="logoname"
             >
               TrustBird
-            </h3>
+            </div>
           </div>
           {/* <img
             alt=""
