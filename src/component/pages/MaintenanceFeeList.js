@@ -1,40 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table, Pagination, Button } from "react-bootstrap";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import "./Page.css";
 //userEffect
 
 //Maintenance Fee List
+const MaintenanceFeeList = () => {
+  const [maintenanceFeeList, setMaintenanceFeeList] = useState();
+  const history = useHistory();
 
-const MaintenanceFeeList = (props) => {
-  let { pageNo } = useParams();
+  const pageLow = 7;
+  const paginationLow = 5;
 
-  pageNo = parseInt(pageNo);
-
-  let history = useHistory();
+  let currentPageNo = 0;
+  let currentPaginationNo = 0;
 
   const handleEvent = (e) => {
     e.preventDefault();
+    history.push({
+      pathname: "/maintenancefee",
+      state: { maintenanceFeeList: maintenanceFeeList },
+    });
   };
 
-  const [maintenanceFeeList, setMaintenanceFeeList] = useState("");
+  useEffect(() => {
+    fetch("/api/maintenancefeelist/list")
+      .then((res) => res.json())
+      .then((maintenanceFeeList) => {
+        let maintenanceFees = new Array();
 
-  useEffect((handleEvent) => {
-    if (!handleEvent) {
-      fetch("/api/maintenancefeelist/list")
-        .then((res) => res.json())
-        .then((maintenanceFeeList) => {
-          setMaintenanceFeeList(maintenanceFeeList);
-        });
-    }
-    if (handleEvent) {
-      history.push({
-        pathname: "/maintenancefee",
-        state: { maintenanceFeeList: maintenanceFeeList },
+        for (let i = 1; i < maintenanceFeeList.length; i++) {
+          maintenanceFees.push({
+            No: i,
+            claimingAgency: maintenanceFeeList.claimingAgency,
+            electronicPaymentNum: maintenanceFeeList.electronicPaymentNum,
+            dueDate: maintenanceFeeList.dueDate,
+            amountDeadline: maintenanceFeeList.amountDeadline,
+          });
+        }
+
+        setMaintenanceFeeList(maintenanceFees);
+        pageNo = Math.ceil(maintenanceFeeList.length / 7);
       });
-    }
   });
+
   return (
     <Container>
       <div className="pageheader">관리비 내역 목록</div>
@@ -42,33 +52,19 @@ const MaintenanceFeeList = (props) => {
         <thead>
           <tr>
             <th>NO.</th>
-            <th>관리비 청구 기관</th>
-            <th>관리비</th>
-            <th>납부 여부</th>
-            <th>영수증 보기</th>
+            <th>청구 기관</th>
+            <th>전자 번호</th>
+            <th>납부 내 기한</th>
+            <th>납부 내 금액</th>
+            <th>보기</th>
           </tr>
         </thead>
         <tbody>
-          {/* {maintenanceFeeList.map((elem) => {
-            return (
-              <tr>
-                <td>{elem.claimingAgency}</td>
-                <td>{elem.electronicPaymentNum}</td>
-                <td>{elem.dueDate}</td>
-                <td>{elem.amountDue}</td>
-                <td>
-                  <Link to="/maintenancefee" onClick={handleEvent}>
-                    <Button>관리비 내역</Button>
-                  </Link>
-                </td>
-              </tr>
-            );
-          })} */}
           {() => {
-            for (var i = 0; i < maintenanceFeeList.length; i++) {
+            for (let i = currentPageNo; i < currentPageNo + pageLow; i++) {
               return (
                 <tr>
-                  <td>{[i] + 1}</td>
+                  <td>{maintenanceFeeList[i].No}</td>
                   <td>{maintenanceFeeList[i].claimingAgency}</td>
                   <td>{maintenanceFeeList[i].electronicPaymentNum}</td>
                   <td>{maintenanceFeeList[i].dueDate}</td>
@@ -81,6 +77,10 @@ const MaintenanceFeeList = (props) => {
                 </tr>
               );
             }
+            currentPageNo =
+              currentPageNo + pageLow > maintenanceFeeList.length
+                ? maintenanceFeeList.length
+                : currentPageNo + pageLow;
           }}
         </tbody>
       </Table>
@@ -88,26 +88,36 @@ const MaintenanceFeeList = (props) => {
       <Pagination
         style={{ marginBottom: "50px", margin: "auto", width: "fit-content" }}
       >
-        <Pagination.First />
         <Pagination.Prev
           onClick={(e) => {
-            console.log(props);
+            currentPaginationNo -= paginationLow;
+            currentPageNo = currentPageNo;
           }}
         >
-          <Link to={`${pageNo - 1}`}>
-            <span aria-hidden="true">›</span>
-          </Link>
+          이전
         </Pagination.Prev>
+        {() => {
+          for (
+            let paginationNo = currentPaginationNo + 1;
+            paginationNo <= currentPaginationNo + paginationLow;
+            paginationNo++
+          ) {
+            return <Pagination onClick={() => {}}>{paginationNo}</Pagination>;
+          }
+
+          currentPaginationNo =
+            currentPaginationNo + paginationLow >
+            Math.ceil(maintenanceFeeList.length / pageLow)
+              ? Math.ceil(maintenanceFeeList.length / pageLow)
+              : currentPaginationNo + paginationLow;
+        }}
         <Pagination.Next
           onClick={(e) => {
-            console.log(props);
+            currentPaginationNo += paginationLow;
           }}
         >
-          <Link to={`${pageNo + 1}`}>
-            <span aria-hidden="true">›</span>
-          </Link>
+          다음
         </Pagination.Next>
-        <Pagination.Last />
       </Pagination>
     </Container>
   );
