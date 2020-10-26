@@ -1,133 +1,122 @@
-
 import React from "react";
-import { Container,  Button, Form } from "react-bootstrap";
+import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import "./Page.css";
-import PostFixInput from "./PostFixInput";
 
 //Contract Output
 const Contract = () => {
   return (
-    <div>
-      <div className="pageheader">계약서</div>
-
-    <Container style={{ maxWidth: "720px", padding:0 , }} >
-    <div>
-        <table className="tablelayout" >
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>소재지</td>
-            <td className="tableborder" style={{}} colspan="4" >
-            </td>
-          </tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"175px"}}>토지</td>
-            <td placeholder="지목"  className="tableborder" style={{ width:"135px"}}>지목</td>
-            <td className="tableborder">          </td>
-            <td className="tableborder" style={{ width:"135px"}}>면적</td>
-            <td className="tableborder" style={{ width:"135px"}}>       </td>
-          </tr>
-          <tr className="tableborder">
-            <td className="tableborder" >건물</td>
-            <td placeholder="용도"></td>
-            <td className="tableborder">          </td>
-            <td className="tableborder" >면적</td>
-            <td className="tableborder" >       </td>
-          </tr>
-          <tr  className="tableborder" >
-            <td className="tableborder" >임대할 부분</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder" className="tableborder">
-            <td className="tableborder" >임대형태</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" >보증금</td>
-            <td  className="tableborder"colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" >계약금</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" >중도금</td>
-            <td  className="tableborder"colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" >잔금</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" >차임</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-
-        </table>
+    <div className="containerborder">
+    <Container style={{ maxWidth: "800px", textAlign:"center"}} >
+      <div className="pageheader">계약서 보기</div>
+      <Row  >
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
+      </Row>  
+      <Row >
+        <Col className="collayout"  sm={2}>토지</Col>
+        <Col className="collayout"  sm={2}>지목</Col>
+        <Col className="collayout"  sm={2}>건축물</Col>
+        <Col className="collayout"  sm={3}>1</Col>
+        <Col className="collayout2"  sm={3}>1</Col>
+      </Row>
+      <Row >
+        <Col className="collayout"  sm={2}>토지</Col>
+        <Col className="collayout"  sm={2}>지목</Col>
+        <Col className="collayout"  sm={2}>건축물</Col>
+        <Col className="collayout"  sm={3}>1</Col>
+        <Col className="collayout2" sm={3}>1</Col>
+      </Row>
+      <Row >
+        <Col className="collayout"  sm={2}>토지</Col>
+        <Col className="collayout"  sm={4}>지목</Col>
+        <Col className="collayout"  sm={3}>1</Col>
+        <Col className="collayout2" sm={3}>1</Col>
+      </Row>
+      <Row >
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout"  sm={2}>소재지</Col>
+        <Col className="collayout2" sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout" sm={2}>소재지</Col>
+        <Col className="collayout2"sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout" sm={2}>소재지</Col>
+        <Col className="collayout2"sm={10}></Col>
+      </Row>
+      <Row >
+        <Col className="collayout3"  sm={2}>소재지</Col>
+        <Col className="collayout4" sm={10}></Col>
+      </Row>
+      <br/>
+      <div>
+      <Row >
+        <Col style={{ padding:"12px"}} sm={2}>기타사항</Col>
+      </Row>
+      <Row>
+        <Col className="collayout4" sm={12}>아직 작성된게 없습니다.</Col>
+      </Row>
+      <br/>
       </div>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
 
-      <Form.Label>특약사항</Form.Label>
-      <table className="tablelayout">
-        <tr className="tableborder">
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-            </ table>
-
-      <table className="tablelayout">
-        <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>임차인</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주소</td>
-            <td  className="tableborder"colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>전화번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주민등록번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-            </table>
-<table className="tablelayout">
-            <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>임대인</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주소</td>
-            <td  className="tableborder"colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>전화번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주민등록번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-            </table>
-
-            <table className="tablelayout">
-            <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>중개인</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주소</td>
-            <td  className="tableborder"colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>전화번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-          <tr className="tableborder">
-            <td className="tableborder" style={{ width:"180px"}}>주민등록번호</td>
-            <td className="tableborder" colspan="4" >
-            </td></tr>
-            </table>
-
-      
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout3" style={{borderRightStyle: "hidden",}}sm={2}>소재지</Col>
+          <Col className="collayout4" sm={10}></Col>
+        </Row>
+        <br/>
+      <div>
+      <Row >
+        <Col style={{ padding:"12px"}} sm={2}>첨부파일</Col>
+      </Row>
+      <Row>
+        <Col className="collayout4" sm={12}>아직 작성된게 없습니다.</Col>
+      </Row>
+      <br/>
+      <Button
+        variant="primary"
+        type="submit"
+        className="button4"
+        style={{display:"block"}}
+      >
+        가져오기
+      </Button>
+      </div>
       <div style={{float:"right"}}>
       <Button
         variant="primary"
@@ -135,14 +124,14 @@ const Contract = () => {
         className="button2"
         style={{marginRight:"16px"}}
       >
-        수정하기
+        등록
       </Button>
       <Button
         variant="primary"
         type="submit"
         className="button2"
       >
-        확인
+        취소
       </Button>
       </div>
     </Container>

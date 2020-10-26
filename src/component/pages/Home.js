@@ -3,8 +3,8 @@ import homeimage from "../icons/부동산 1.jpg"
 import { Card, Button, Container, Row, Col, Form } from "react-bootstrap";
 import ReactFullpage from '@fullpage/react-fullpage'
 import "./Page.css"
-import ServiceIntro from "./ServiceIntro2"
-import FoundationIntro from "./FoundationIntro2"
+import ServiceIntro from "./ServiceIntro"
+import FoundationIntro from "./FoundationIntro"
 
 //Home
 const Home = () => {
@@ -18,18 +18,17 @@ const Home = () => {
     return (
       <Container >
       <ReactFullpage.Wrapper>
-        <div className={"section"}  >   <img src={homeimage} style={{width:"100%", height:"100%" }}/>
+        <div className={"section"} style={{maxWidth: "1200px"}} >
+          <img src={homeimage}  />
           <button onClick={() => fullpageApi.moveSectionDown()}>
             Click me to move down
           </button>
         </div>
         <div className="section">
-        <div className="sectionheader">서비스 소개</div>
           <ServiceIntro />
           
         </div>
         <div className="section">
-        <div className="sectionheader">재단 소개</div>
           <FoundationIntro />
         </div>
       </ReactFullpage.Wrapper>
