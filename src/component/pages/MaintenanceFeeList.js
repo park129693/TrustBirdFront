@@ -41,7 +41,7 @@ const MaintenanceFeeList = () => {
         }
 
         setMaintenanceFeeList(maintenanceFees);
-        pageNo = Math.ceil(maintenanceFeeList.length / 7);
+        // pageNo = Math.ceil(maintenanceFeeList.length / 7);
       });
   });
 
@@ -85,7 +85,7 @@ const MaintenanceFeeList = () => {
         </tbody>
       </Table>
 
-      <Pagination
+      {/* <Pagination
         style={{ marginBottom: "50px", margin: "auto", width: "fit-content" }}
       >
         <Pagination.Prev
@@ -118,7 +118,7 @@ const MaintenanceFeeList = () => {
         >
           다음
         </Pagination.Next>
-      </Pagination>
+      </Pagination> */}
     </Container>
   );
 };
