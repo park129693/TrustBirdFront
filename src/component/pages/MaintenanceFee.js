@@ -12,8 +12,6 @@ const MaintenanceFee = () => {
     deadline: "",
     amountDeadline: "",
     payment: "",
-    payer: "",
-    giro: {},
   });
 
   useEffect(() => {

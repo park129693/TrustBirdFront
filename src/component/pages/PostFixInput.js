@@ -4,17 +4,17 @@ import "./Page.css"
 
 const PostFixInput = ({ type, placeholder, postfix, onChange, ...props }) => {
   return (
-    <div style={{ position: "relative", }}>
+    <div style={{ position: "relative" }}>
       <Form.Control
         type={type}
-        onChange={onChange} 
+        onChange={onChange}
         placeholder={placeholder}
         required
-        style={Object.assign({ paddingRight: 44,}, props.style ), {height:"42px"}  }
+        style={Object.assign({ paddingRight: 44 }, props.style) }
         {...props}
       />
       <span
-      className="fixinput" style={{color:"#222222", }}
+      className="fixinput"
       >
         {postfix}
       </span>
