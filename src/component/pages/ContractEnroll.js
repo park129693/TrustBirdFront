@@ -1,9 +1,68 @@
-import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container,  Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import "./Page.css";
 import PostFixInput from "./PostFixInput";
-import "./Page.css"
+
+
+
+
 //Contract Enrollment
 const ContractEnroll = () => {
+  const history = useHistory();
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+    dateOfBirth: "",
+    gender: "",
+    telephoneNum: "",
+    permission: "user",
+  });
+
+  function handleInputChange(e) {
+    e.preventDefault();
+
+    const { value, name } = e.target;
+
+    console.log(value, name);
+
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  }
+
+  function onSubmit(e) {
+    e.preventDefault();
+
+    fetch("http://192.168.0.22:3001/api/user/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          history.push("/signin");
+        } else {
+          const error = new Error(res.error);
+
+          throw error;
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Error loggin in please try again");
+      });
+  }
+
+
+
+
+
+
   return (
     <Container>
       <div className="pageheader">계약서 등록</div>

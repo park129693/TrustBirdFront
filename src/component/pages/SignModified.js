@@ -12,7 +12,7 @@ const SignModified = () => {
       <Form style={{ maxWidth: "720px", margin:"auto" }} className="sign-form">
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 사용자 이름 </Form.Label>
-          <Form.Control type="text" placeholder="사용자 이름 입력" required />
+          <Form.Control type="text" placeholder="" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">

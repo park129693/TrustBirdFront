@@ -16,12 +16,9 @@ const Home = () => {
 
   render={({ state, fullpageApi }) => {
     return (
-      <Container >
       <ReactFullpage.Wrapper>
-        <div className={"section"}  >   <img src={homeimage} style={{width:"100%", height:"100%" }}/>
-          <button onClick={() => fullpageApi.moveSectionDown()}>
-            Click me to move down
-          </button>
+        <div className={"section"}  >
+          <div className="homeimage"  onClick={() => fullpageApi.moveSectionDown()} />
         </div>
         <div className="section">
         <div className="sectionheader">서비스 소개</div>
@@ -33,7 +30,6 @@ const Home = () => {
           <FoundationIntro />
         </div>
       </ReactFullpage.Wrapper>
-      </Container>
     );
   }}
 />
