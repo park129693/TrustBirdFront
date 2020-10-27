@@ -87,9 +87,6 @@ const Main = () => {
             {/* <Route path="/signout">
                     <SignOut />
                 </Route> */}
-          <Route path="/footer">
-              <Footer />
-            </Route>       
           </Switch>
         </div>
       </Router>

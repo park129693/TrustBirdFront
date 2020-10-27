@@ -9,7 +9,7 @@ const SignModified = () => {
     <Container  >
       <div className="pageheader">회원정보 수정</div>
 
-      <Form style={{ maxWidth: "720px", margin:"auto" }} className="sign-form">
+      <Form style={{ maxWidth: "100%" }} className="sign-form">
         <Form.Group controlId="formBasicUsername">
           <Form.Label> 사용자 이름 </Form.Label>
           <Form.Control type="text" placeholder="" required />

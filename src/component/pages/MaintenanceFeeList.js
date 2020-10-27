@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table, Pagination, Button } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 
 import "./Page.css";
 //userEffect
 
 //Maintenance Fee List
-const MaintenanceFeeList = () => {
-  const [maintenanceFeeList, setMaintenanceFeeList] = useState();
-  const history = useHistory();
 
 
   const handleEvent = (e) => {
     e.preventDefault();
-    history.push({
-      pathname: "/maintenancefee",
-      state: { maintenanceFeeList: maintenanceFeeList },
-    });
   };
 
 
@@ -28,11 +21,10 @@ const MaintenanceFeeList = () => {
         <thead>
           <tr style={{textAlign:"center"}}>
             <th>NO.</th>
-            <th>청구 기관</th>
-            <th>전자 번호</th>
-            <th>납부 내 기한</th>
-            <th>납부 내 금액</th>
-            <th>보기</th>
+            <th>관리비 청구 기관</th>
+            <th>관리비</th>
+            <th>납부 여부</th>
+            <th>영수증 보기</th>
           </tr>
         </thead>
         <tbody>
@@ -40,7 +32,7 @@ const MaintenanceFeeList = () => {
             for (let i = currentPageNo; i < currentPageNo + pageLow; i++) {
               return (
                 <tr>
-                  <td>{maintenanceFeeList[i].No}</td>
+                  <td>{[i] + 1}</td>
                   <td>{maintenanceFeeList[i].claimingAgency}</td>
                   <td>{maintenanceFeeList[i].electronicPaymentNum}</td>
                   <td>{maintenanceFeeList[i].dueDate}</td>

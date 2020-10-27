@@ -146,6 +146,22 @@ const Contract = () => {
 
         </table>
       </div>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
+        <Row >
+          <Col className="collayout" sm={2}>소재지</Col>
+          <Col className="collayout2" sm={10}></Col>
+        </Row>
 
       <Form.Label>특약사항</Form.Label>
       <table className="tablelayout">
@@ -230,14 +246,14 @@ const Contract = () => {
         className="button2"
         style={{marginRight:"16px"}}
       >
-        수정하기
+        등록
       </Button>
       <Button
         variant="primary"
         type="submit"
         className="button2"
       >
-        확인
+        취소
       </Button>
       </div>
       </Form>

@@ -66,91 +66,74 @@ const ContractEnroll = () => {
   return (
     <Container>
       <div className="pageheader">계약서 등록</div>
-      <Form style={{ maxWidth: "720px", margin: "auto",}} className="sign-form">
-
-        <Form.Group controlId="location">
-          <Form.Label> 소재지 </Form.Label>
+      <Form style={{ maxWidth: "800px", margin: "auto" }} className="sign-form">
+        <Form.Group controlId="formBasicLocation">
+          <Form.Label> 계약 소재지 </Form.Label>
           <PostFixInput
-            labelText="address"
+            labelText="계약 소재지"
             postfix=""
             type="text"
             placeholder="주소"
           />
         </Form.Group>
 
-        <Form.Group controlId="land">
-          <Form.Label> 토지 </Form.Label>
-          <div >
-          <div style={{display:"inline-block",  width:"350px", marginRight:"20px" }}>
+        <Form.Group controlId="formBasicLandCategory">
+          <Form.Label> 지목 </Form.Label>
           <PostFixInput
-            labelText="landPurpose"
+            labelText="지목"
             postfix=""
             type="text"
-            placeholder="지목"
-          />  
-          </div>
-          <div style={{display:"inline-block", width:"350px"}}>
+            placeholder="지번"
+          />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLandArea">
+          <Form.Label> 토지의 면적 </Form.Label>
           <PostFixInput
-            labelText="landArea"
+            labelText="토지의 면적"
             postfix="㎡"
             type="text"
             placeholder="면적"
           />
-          </div>
-          </div>
         </Form.Group>
 
-        <Form.Group controlId="Building">
-          <Form.Label> 건물 </Form.Label>
-          <div>
-          <div style={{display:"inline-block",  width:"350px", marginRight:"20px" }}>
+        <Form.Group controlId="formBasicBuildingPurpose">
+          <Form.Label> 건물의 용도 </Form.Label>
           <PostFixInput
-            labelText="buildingPurpose"
+            labelText="건물의 용도"
             postfix=""
             type="text"
             placeholder="종류"
           />
-          </div>
-          <div style={{display:"inline-block",  width:"350px", marginRight:"" }}>
+        </Form.Group>
+
+        <Form.Group controlId="formBasicBuildingArea">
+          <Form.Label> 건물의 면적 </Form.Label>
           <PostFixInput
-            labelText="bulidingArea"
+            labelText="부동산종류"
             postfix="㎡"
             type="text"
             placeholder="면적"
           />
-          </div>
-          </div>
         </Form.Group>
 
-        <Form.Group controlId="partOfLease">
-          <Form.Label> 임대 </Form.Label>
-          <div>
-          <div style={{display:"inline-block",  width:"350px", marginRight:"20px" }}>
-          <PostFixInput labelText="partOfLeaseArea" type="text" placeholder="임대할 부분"  />
-          </div>
-          <div style={{display:"inline-block",  width:"350px", marginRight:"" }}>     
-          <PostFixInput
-              labelText="partOfLeaseArea"
+        <Form.Group controlId="formBasicPartOfLease">
+          <Form.Label> 임대할 부분 </Form.Label>
+          <Form.Control type="text" placeholder="임대할 부분" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPartOfLeaseArea">
+          <Form.Label> 임대할 부분의 면적 </Form.Label>
+            <PostFixInput
+              labelText="부동산 종류"
               postfix="㎡"
               type="text"
               placeholder="면적"
             />
-            </div>
-            </div>
-          </Form.Group >
-            
-
-        <Form.Group controlId="formBasicPeriod">
-          <Form.Label> 임대 기간 </Form.Label>
-          <div>
-          <Form.Control type="date" required style={{display:"inline-block",  width:"350px", marginRight:"20px" }} />
-          <Form.Control type="date" required style={{display:"inline-block",  width:"350px", marginRight:"" }} />
-          </div>
         </Form.Group>
-
+        <div>
           <Form.Group>
-           <Form.Label>임대 형태 </Form.Label>
-           <br/>
+           <Form.Label>전 · 월세</Form.Label><br/>
           <Form
             controlId="formBasicMonthly"
             style={{ display: "inline-block", marginRight: "32px" }}
@@ -164,61 +147,57 @@ const ContractEnroll = () => {
             <Form.Check type="checkbox" label="월세" required />
           </Form>
           </Form.Group>
+        </div>
+
+        <Form.Group controlId="formBasicPeriod">
+          <Form.Label> 임대 기간 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
 
         <Form.Group controlId="formBasicSecurityDeposit">
-          <Form.Label> 보증금 / 계약금 </Form.Label>
-          <div>
-            <div style={{display:"inline-block",  width:"350px", marginRight:"20px" }}  >
-            <PostFixInput
+          <Form.Label> 보증금 </Form.Label>
+          <PostFixInput
             labelText="보증금"
             postfix="만 원"
             type="text"
             placeholder="금액"
           />
-            </div>
-            <div style={{display:"inline-block",  width:"350px", marginRight:"" }} >            
+        </Form.Group>
+
+        <Form.Group controlId="formBasicContractPrice">
+          <Form.Label> 계약금 </Form.Label>
           <PostFixInput
             labelText="계약금"
             postfix="만 원"
             type="text"
             placeholder="금액"
-            />
-            </div>
-          </div>
-          
+          />
         </Form.Group>
 
-
         <Form.Group controlId="formBasicInterimPrice">
-          <Form.Label> 중도금 / 잔금 </Form.Label>
-          <div>
-            <div style={{display:"inline-block",  width:"350px", marginRight:"20px" }}>
+          <Form.Label> 중도금 </Form.Label>
           <PostFixInput
             labelText="중도금"
             postfix="만 원"
             type="text"
             placeholder="금액"
           />
-          </div>
-          <div style={{display:"inline-block",  width:"350px", marginRight:"" }}>
+        </Form.Group>
+        
+
+        <Form.Group controlId="formBasicBalance">
+          <Form.Label> 잔금</Form.Label>
           <PostFixInput
             labelText="잔금"
             postfix="만 원"
             type="text"
             placeholder="금액"
           />
-          </div>
-          </div>
         </Form.Group>
-        
+
         <Form.Group controlId="formBasicRent">
           <Form.Label> 차임 </Form.Label>
-          <PostFixInput
-            labelText="차임"
-            postfix="만 원"
-            type="text"
-            placeholder="금액"
-          />
+          <Form.Control type="text" />
         </Form.Group>
 
         <Form.Group controlId="formBasicSpecialAgreement">
@@ -226,109 +205,60 @@ const ContractEnroll = () => {
           <Form.Control type="text" />
         </Form.Group>
 
-        <Form.Group controlId="lessor">
-          <Form.Label> 임대인 </Form.Label>
-          <div>
-            <div style={{display:"inline-block",  width:"220px", marginRight:"" }} >
-          <PostFixInput
-            labelText="이름"
-            postfix=""
-            type="text"
-            placeholder="성명"
-          />
-          </div>
-          <div style={{display:"inline-block",  width:"500px", marginRight:"" }}>
-          <PostFixInput
-            labelText="전화번호"
-            postfix=""
-            type="text"
-            placeholder="연락처"
-          />
-          </div>
-          </div>
-          <PostFixInput
-            labelText="주소"
-            postfix=""
-            type="text"
-            placeholder="주소"
-          />
-          <PostFixInput
-            labelText="주민번호"
-            postfix=""
-            type="text"
-            placeholder="주민번호"
-          />
+        <Form.Group controlId="formBasicLessorAddress">
+          <Form.Label> 임대인의 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorRRN">
+          <Form.Label> 임대인 주민번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorName">
+          <Form.Label> 임대인 이름 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLessorTelephoneNum">
+          <Form.Label> 임대인 휴대번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeAddress">
+          <Form.Label> 임차인 주소 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeRRN">
+          <Form.Label> 임차인 주민번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeName">
+          <Form.Label> 임차인 이름 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicLesseeTelephoneNum">
+          <Form.Label> 임차인 휴대번호 </Form.Label>
+          <Form.Control type="text" required />
+        </Form.Group>
+
+        <Form.Group style={{display:"table-caption"}}>
+          <Form.Label controlId="formBasicRealtorAddress"> 
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorOfficeName">  
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorName">
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRegistrationNum"> 
+          <input type="text" required /></Form.Label>
+          <Form.Label controlId="formBasicRealtorTelephoneNum">
+          <input type="text" required /></Form.Label>
           
         </Form.Group>
-
-        <Form.Group controlId="lessue">
-          <Form.Label> 임차인 </Form.Label>
-          <div>
-            <div style={{display:"inline-block",  width:"220px", marginRight:"" }} >
-          <PostFixInput
-            labelText="이름"
-            postfix=""
-            type="text"
-            placeholder="성명"
-          />
-          </div>
-          <div style={{display:"inline-block",  width:"500px", marginRight:"" }}>
-          <PostFixInput
-            labelText="전화번호"
-            postfix=""
-            type="text"
-            placeholder="연락처"
-          />
-          </div>
-          </div>
-          <PostFixInput
-            labelText="주소"
-            postfix=""
-            type="text"
-            placeholder="주소"
-          />
-          <PostFixInput
-            labelText="주민번호"
-            postfix=""
-            type="text"
-            placeholder="주민번호"
-          />
-        </Form.Group>
-
-        <Form.Group controlId="realtor">
-          <Form.Label> 중개인 </Form.Label>
-          <div>
-            <div style={{display:"inline-block",  width:"220px", marginRight:"" }} >
-          <PostFixInput
-            labelText="이름"
-            postfix=""
-            type="text"
-            placeholder="성명"
-          />
-          </div>
-          <div style={{display:"inline-block",  width:"500px", marginRight:"" }}>
-          <PostFixInput
-            labelText="전화번호"
-            postfix=""
-            type="text"
-            placeholder="연락처"
-          />
-          </div>
-          </div>
-          <PostFixInput
-            labelText="주소"
-            postfix=""
-            type="text"
-            placeholder="주소"
-          />
-          <PostFixInput
-            labelText="주민번호"
-            postfix=""
-            type="text"
-            placeholder="주민번호"
-          />
-        </Form.Group>
-
+        
         <Button
           variant="primary"
           type="submit"

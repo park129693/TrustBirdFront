@@ -116,22 +116,27 @@ const Trust = () => {
       <Button
         variant="primary"
         type="submit"
-        className="button2"
-        style={{marginRight:"16px"}}
+        className="button1"
       >
-        수정하기
+        회원가입
       </Button>
+      </div>
       <Button
         variant="primary"
         type="submit"
-        className="button2"
+        className="button1"
       >
-        확인
+        회원가입
+      </Button> <Button
+        variant="primary"
+        type="submit"
+        className="button1"
+      >
+        회원가입
       </Button>
       </div>
       </Form>
     </Container>
-    </div>
   );
 };
 
